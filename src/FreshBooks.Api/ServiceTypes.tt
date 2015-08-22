@@ -1,0 +1,217 @@
+﻿<#@ template debug="true" hostSpecific="true" #>
+<#@ output extension=".cs" #>
+<#@ include file="TemplateFileManagerV2.1.ttinclude" #>
+<#@ Assembly Name="System.Xml" #>
+<#@ Assembly Name="Microsoft.CSharp" #>
+<#@ Assembly name="EnvDTE" #>
+<#@ import namespace="EnvDTE" #>
+<#@ import namespace="System" #>
+<#@ import namespace="System.Diagnostics" #>
+<#@ import namespace="System.IO" #>
+<#@ import namespace="System.Text" #>
+<#@ import namespace="System.Collections.Generic" #>
+<#@ import namespace="System.Reflection" #>
+<#@ import namespace="System.Xml" #>
+<#@ import namespace="System.Xml.Serialization" #>
+<#@ import namespace="System.Xml.Schema" #>
+<#@ import namespace="System.CodeDom" #>
+<#@ import namespace="System.CodeDom.Compiler" #>
+<#@ import namespace="Microsoft.CSharp" #>
+<# 
+	var manager = TemplateFileManager.Create(this);
+
+	IServiceProvider hostServiceProvider = (IServiceProvider)this.Host;
+	//var dte = hostServiceProvider.GetService(typeof(DTE)) as DTE; 
+	var dte = (DTE)GetCOMService(hostServiceProvider, typeof(DTE));
+	var window = dte.Windows.Item(EnvDTE.Constants.vsWindowKindOutput);
+	var outputWindow = (OutputWindow) window.Object;
+	outputWindow.ActivePane.Activate(); 
+
+    // directory of this template
+    var outputDirectory = Path.GetDirectoryName(Host.TemplateFile);
+	Log(outputWindow, "outputDirectory: " + outputDirectory);
+	var xmlDir = Host.ResolvePath("xml_files");
+	Log(outputWindow, "xmlDir: " + xmlDir);
+	
+    foreach(var file in new DirectoryInfo(xmlDir).GetFiles("*.xml")) {
+
+        var xmlFile = Path.Combine(xmlDir, file.Name);
+        var xsdFile = Path.Combine(xmlDir, file.Name.Replace(".xml", ".xsd"));
+
+		XmlReader reader = XmlReader.Create(xmlFile);
+		XmlSchemaSet schemaSet = new XmlSchemaSet();
+		XmlSchemaInference schema = new XmlSchemaInference();
+		schemaSet = schema.InferSchema(reader);
+
+		foreach (XmlSchema s in schemaSet.Schemas())
+		{
+            var sb = new StringBuilder();
+            using (StringWriter sw = new Utf8StringWriter(sb))
+            {
+				using (var writer = XmlWriter.Create(sw, new XmlWriterSettings
+                {
+                    Encoding = new UTF8Encoding(false),
+                    Indent = true,
+                    //NamespaceHandling = NamespaceHandling.OmitDuplicates,
+                    //Async = false,
+                    NewLineOnAttributes = false,
+                    //NewLineHandling = NewLineHandling.Auto
+                }))
+				{
+					s.Write(writer);
+					writer.Flush();
+				} 
+			}
+
+			File.WriteAllText(xsdFile, sb.ToString());
+		}
+    }
+
+    // iterate through each XSD file in our /Schema/ directory
+    // and output the generated C# file in this directory.
+	var allNamespaces = new List<string>();
+    foreach(var file in new DirectoryInfo(xmlDir).GetFiles("*.xsd")) {
+
+        // ouput file should be the directory of this template, with .Generated.cs
+        //var outputFile = Path.Combine(outputDirectory, file.Name.Replace(".xsd", ".Generated.cs"));
+		
+		var sb = new StringBuilder();
+		var u = true;
+		foreach(char c in file.Name.ToCharArray()){
+			if(c == '_' || c == '.' || c == ' ') {
+				u = true;
+				continue;
+            }
+			if(u) {
+				sb.Append(c.ToString().ToUpper());
+				u = false;
+            } else {
+				sb.Append(c.ToString());
+            }
+        }
+
+		//var csFileName = System.Threading.Thread.CurrentThread.CurrentCulture.TextInfo.ToTitleCase(file.Name.Replace(".", " ")).Replace("Xsd", "Types").Replace(" ", "");
+		var csFileName = sb.ToString().Replace("Xsd", "").Replace(" ", "");
+		var currentNamespace = (string)System.Runtime.Remoting.Messaging.CallContext.LogicalGetData("NamespaceHint");
+		var addOnNamespace = csFileName.Replace("Request", "").Replace("Response", "");
+		var csNamespace =  (currentNamespace + "." + addOnNamespace);
+		Log(outputWindow, "namespace: " + csNamespace);
+		if(!allNamespaces.Contains(addOnNamespace))
+			allNamespaces.Add(addOnNamespace);
+
+		manager.StartNewFile(csFileName + ".cs");
+		#><#= CleanCs(csFileName, file.Name, GenerateFromXsd(outputWindow, file.FullName, csNamespace)) #>
+		<#
+		File.Delete(file.FullName);
+    }
+
+	manager.StartNewFile("FreshBooksClient.partial.cs");
+#>using System;
+using System.Threading.Tasks;
+
+namespace FreshBooks.Api
+{
+    public partial class FreshBooksClient
+    {
+<# foreach(var ns in allNamespaces) {#>		
+        public async Task<<#=ns#>.response> <#=ns#>(<#=ns#>.request request)
+        {
+            return await SendAsync<<#=ns#>.response>(request.ToXmlString());
+        }
+<#}#>
+	}
+}
+<#
+	manager.Process();
+#>
+<#+
+
+    public class Utf8StringWriter : StringWriter
+    {
+        public Utf8StringWriter(StringBuilder sb) : base(sb)
+        {
+        }
+        public override Encoding Encoding { get { return Encoding.UTF8; } }
+    }
+
+	private void Log(OutputWindow outputWindow, string message)
+	{
+		if(outputWindow.ActivePane != null) 
+		{
+			outputWindow.ActivePane.OutputString(message + "\n");
+		}
+	}
+
+	private object GetCOMService(IServiceProvider provider, Type type)
+	{
+	  object result = provider.GetService(type);
+	  if (result == null)
+	  {
+		 return result;
+	  }
+
+	  try
+	  {
+		return System.Runtime.InteropServices.Marshal.GetObjectForIUnknown(System.Runtime.InteropServices.Marshal.GetIUnknownForObject(result));
+	  }
+	  catch (Exception)
+	  {
+		return result;
+	  }
+	}
+
+	private string CleanCs(string ns, string xsdFileName, string contents) {
+		if(ns.Contains("Request")) {
+			var fileParts = xsdFileName.Split('\\').Last().Split('.');
+			var defaultMethod = string.Join(".", fileParts.Take(2));
+			contents = contents.Replace("private string methodField;", "private string methodField = \"" + defaultMethod + "\";");
+        }
+		return contents;
+    }
+
+    private string GenerateFromXsd(OutputWindow outputWindow, string xsdFileName, string csNamespace)
+    {
+        // load the xsd
+        XmlSchema xsd;
+        using (FileStream stream = new FileStream(xsdFileName, FileMode.Open, FileAccess.Read))
+        {
+            xsd = XmlSchema.Read(stream, null);
+        }
+
+        var xsds = new XmlSchemas();
+        xsds.Add(xsd);
+        xsds.Compile(null, true);
+
+        var schemaImporter = new XmlSchemaImporter(xsds);
+
+        // create the codedom
+		var codeNamespace = new System.CodeDom.CodeNamespace(csNamespace);
+        var codeExporter = new XmlCodeExporter(codeNamespace);
+
+        var maps = new List<object>();
+        foreach (XmlSchemaType schemaType in xsd.SchemaTypes.Values)
+        {
+            maps.Add(schemaImporter.ImportSchemaType(schemaType.QualifiedName));
+        }
+        foreach (XmlSchemaElement schemaElement in xsd.Elements.Values)
+        {
+            maps.Add(schemaImporter.ImportTypeMapping(schemaElement.QualifiedName));
+        }
+        foreach (XmlTypeMapping map in maps)
+        {
+            codeExporter.ExportTypeMapping(map);
+        }
+
+        // Check for invalid characters in identifiers
+        CodeGenerator.ValidateIdentifiers(codeNamespace);
+
+        // output the C# code
+        var codeProvider = new CSharpCodeProvider();
+
+        using (var writer = new StringWriter())
+        {
+            codeProvider.GenerateCodeFromNamespace(codeNamespace, writer, new CodeGeneratorOptions());
+            return writer.GetStringBuilder().ToString();
+        }
+    }
+#>

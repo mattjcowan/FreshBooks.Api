@@ -1,11 +1,5 @@
-﻿using FreshBooks.Api.ServiceTypes;
-using NUnit.Framework;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using NUnit.Framework;
 using System.Text.RegularExpressions;
-using System.Threading.Tasks;
 
 namespace FreshBooks.Api.Tests
 {
@@ -22,9 +16,9 @@ namespace FreshBooks.Api.Tests
   <uri>http://example.com/webhooks/ready</uri>
 </request>".Trim();
 
-            var request = new CallbackListRequest();
-            request.Event = EventNames.invoice_create;
-            request.Uri = "http://example.com/webhooks/ready";
+            var request = new CallbackList.request();
+            request.@event = EventNames.invoice_create;
+            request.uri = "http://example.com/webhooks/ready";
             var actual = request.ToXmlString();
 
             // strip new lines to ensure the same rules apply
@@ -56,9 +50,9 @@ namespace FreshBooks.Api.Tests
   </callbacks>  
 </response>".Trim();
 
-            var response = validResponse.FromXmlString<CallbackListResponse>();
+            var response = validResponse.FromXmlString<CallbackList.response>();
 
-            Assert.IsTrue(response.Status == "ok");
+            Assert.IsTrue(response.status == "ok");
         }
     }
 }

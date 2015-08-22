@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<request method="callback.verify">
+  <callback>
+    <callback_id>20</callback_id>
+    <verifier>YLN6RcfR3Q99Xxmfzz8WdJChgVjb4uZ42</verifier>
+  </callback>
+</request>

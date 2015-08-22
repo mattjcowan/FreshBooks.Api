@@ -1,2 +1,2 @@
-﻿https://mycompany.freshbooks.com/api/2.1/xml-in
+﻿mycompany
 d5b248d9asld9a0adl1k3rajfkasd013

@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<request method="callback.resendToken">
+  <callback_id>20</callback_id>
+</request>

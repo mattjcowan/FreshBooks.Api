@@ -7,8 +7,8 @@
     <ProjectGuid>{81D8131C-C063-4AD9-9CAF-C882F395104C}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>FreshBooks.ServiceStackClient.Tests</RootNamespace>
-    <AssemblyName>FreshBooks.ServiceStackClient.Tests</AssemblyName>
+    <RootNamespace>FreshBooks.Api.Tests</RootNamespace>
+    <AssemblyName>FreshBooks.Api.Tests</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
