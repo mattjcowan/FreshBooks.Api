@@ -1,1 +1,25 @@
-# FreshBooks.ServiceStackClient
+# FreshBooks.Api
+
+- Callbacks (OK)
+- Categories (Pending)
+- Clients (Pending)
+- Estimates (Pending)
+- Expenses (Pending)
+- Gateway (Pending)
+- Invoices (Pending)
+- Items (Pending)
+- Languages (Pending)
+- Payments (Pending)
+- Projects (Pending)
+- Receipts (Pending)
+- Recurring (Pending)
+- Staff (Pending)
+- System (Pending)
+- Tasks (Pending)
+- Taxes (Pending)
+- Time Entries (Pending)
+- Contractors (Pending)
+- Default Termsv
+- Reports (Pending)
+- Currency (Pending)
+- Email Templates (Pending)
