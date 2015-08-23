@@ -70,6 +70,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BaseTests.cs" />
+    <Compile Include="ExceptionHandlingTests.cs" />
     <Compile Include="CallbacksTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SerializationTests.cs" />

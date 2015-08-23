@@ -8,33 +8,9 @@
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://www.freshbooks.com/api/")]
     [System.Xml.Serialization.XmlRootAttribute(Namespace="http://www.freshbooks.com/api/", IsNullable=false)]
-    public partial class response {
-        
-        private string errorField;
-        
-        private ushort codeField;
+    public partial class response: BaseResponse {
         
         private string statusField;
-        
-        /// <remarks/>
-        public string error {
-            get {
-                return this.errorField;
-            }
-            set {
-                this.errorField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public ushort code {
-            get {
-                return this.codeField;
-            }
-            set {
-                this.codeField = value;
-            }
-        }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]

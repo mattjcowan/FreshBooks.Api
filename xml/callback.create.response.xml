@@ -1,6 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <response xmlns="http://www.freshbooks.com/api/" status="ok">
-  <error>Error Message</error>
-  <code>40010</code>
   <callback_id>20</callback_id>
 </response>

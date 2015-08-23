@@ -6,7 +6,7 @@ namespace FreshBooks.Api.Tests
     public class CallbacksTests: BaseTests
     {
         [Test]
-        public async void CanListCallbacksAsync2()
+        public async void CanListCallbacksAsync()
         {
             var request = new CallbackList.request()
             {

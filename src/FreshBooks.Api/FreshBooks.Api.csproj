@@ -34,6 +34,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="BaseResponse.cs">
+      <DependentUpon>ServiceTypes.tt</DependentUpon>
+    </Compile>
     <Compile Include="CallbackCreateRequest.cs">
       <DependentUpon>ServiceTypes.tt</DependentUpon>
     </Compile>
@@ -67,6 +70,10 @@
     <Compile Include="FreshBooksClient.partial.cs">
       <DependentUpon>ServiceTypes.tt</DependentUpon>
     </Compile>
+    <Compile Include="FreshBooksClientAuthStrategy.cs" />
+    <Compile Include="FreshBooksClientExtensions.cs" />
+    <Compile Include="FreshBooksClientOptions.cs" />
+    <Compile Include="FreshBooksException.cs" />
     <Compile Include="Helpers\EventNames.cs" />
     <Compile Include="FreshBooksClient.cs" />
     <Compile Include="Helpers\MethodNames.cs" />

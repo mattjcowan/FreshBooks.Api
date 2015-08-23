@@ -24,16 +24,18 @@
 	//var dte = hostServiceProvider.GetService(typeof(DTE)) as DTE; 
 	var dte = (DTE)GetCOMService(hostServiceProvider, typeof(DTE));
 	var window = dte.Windows.Item(EnvDTE.Constants.vsWindowKindOutput);
+	var solutionDir = Path.GetDirectoryName(dte.Solution.FullName);
 	var outputWindow = (OutputWindow) window.Object;
 	outputWindow.ActivePane.Activate(); 
 
     // directory of this template
     var outputDirectory = Path.GetDirectoryName(Host.TemplateFile);
 	Log(outputWindow, "outputDirectory: " + outputDirectory);
-	var xmlDir = Host.ResolvePath("xml_files");
-	Log(outputWindow, "xmlDir: " + xmlDir);
+	var xmlDirInfo = new DirectoryInfo(solutionDir + @"\..\xml");
+	var xmlDir = xmlDirInfo.FullName;
+	Log(outputWindow, "xmlDirInfo: " + xmlDirInfo.FullName);
 	
-    foreach(var file in new DirectoryInfo(xmlDir).GetFiles("*.xml")) {
+    foreach(var file in xmlDirInfo.GetFiles("*.xml")) {
 
         var xmlFile = Path.Combine(xmlDir, file.Name);
         var xsdFile = Path.Combine(xmlDir, file.Name.Replace(".xml", ".xsd"));
@@ -50,12 +52,7 @@
             {
 				using (var writer = XmlWriter.Create(sw, new XmlWriterSettings
                 {
-                    Encoding = new UTF8Encoding(false),
-                    Indent = true,
-                    //NamespaceHandling = NamespaceHandling.OmitDuplicates,
-                    //Async = false,
-                    NewLineOnAttributes = false,
-                    //NewLineHandling = NewLineHandling.Auto
+                    Encoding = new UTF8Encoding(false)
                 }))
 				{
 					s.Write(writer);
@@ -104,9 +101,24 @@
 		<#
 		File.Delete(file.FullName);
     }
+#><#
+	manager.StartNewFile("BaseResponse.cs");
+#>using System;
+using System.Net;
 
+namespace FreshBooks.Api
+{
+	public abstract partial class BaseResponse 
+	{
+		public HttpStatusCode StatusCode { get; set; }
+        public string error { get; set; }
+        public int code { get; set; }
+    }
+}
+<#
 	manager.StartNewFile("FreshBooksClient.partial.cs");
 #>using System;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace FreshBooks.Api
@@ -114,9 +126,9 @@ namespace FreshBooks.Api
     public partial class FreshBooksClient
     {
 <# foreach(var ns in allNamespaces) {#>		
-        public async Task<<#=ns#>.response> <#=ns#>(<#=ns#>.request request)
+        public async Task<<#=ns#>.response> <#=ns#>(<#=ns#>.request request, CancellationToken? token = null)
         {
-            return await SendAsync<<#=ns#>.response>(request.ToXmlString());
+            return await SendAsync<<#=ns#>.response>(request.ToXmlString(), token.GetValueOrDefault(CancellationToken.None));
         }
 <#}#>
 	}
@@ -208,10 +220,15 @@ namespace FreshBooks.Api
         // output the C# code
         var codeProvider = new CSharpCodeProvider();
 
+		var code = string.Empty;
         using (var writer = new StringWriter())
         {
             codeProvider.GenerateCodeFromNamespace(codeNamespace, writer, new CodeGeneratorOptions());
-            return writer.GetStringBuilder().ToString();
+            code = writer.GetStringBuilder().ToString();
         }
+
+		// Make the response class inherit from BaseResponse
+		code = code.Replace("public partial class response {", "public partial class response: BaseResponse {");
+		return code;
     }
 #>

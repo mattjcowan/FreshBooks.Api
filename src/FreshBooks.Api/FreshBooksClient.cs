@@ -7,80 +7,74 @@ using System.Threading.Tasks;
 
 namespace FreshBooks.Api
 {
+    // Learn about HttpClient here:
+    // http://chimera.labs.oreilly.com/books/1234000001708/ch14.html
+
     public partial class FreshBooksClient
     {
         private string _url;
-        private string _token;
+        private HttpClient _httpClient;
 
-        public FreshBooksClient(string account, string token)
+        public FreshBooksClient(HttpClient httpClient, string account, FreshBooksClientOptions options)
         {
-            if (string.IsNullOrWhiteSpace(account))
-                throw new ArgumentNullException("account");
-            if (string.IsNullOrWhiteSpace(token))
-                throw new ArgumentNullException("token");
+            if (httpClient == null)
+                throw new ArgumentNullException("httpClient");
+            if (options == null)
+                throw new ArgumentNullException("options");
 
-            this._url = string.Format("https://{0}.freshbooks.com/api/2.1/xml-in", account);
-            this._token = token;
+            _url = string.Format("https://{0}.freshbooks.com/api/2.1/xml-in", account);
+            _httpClient = httpClient;
+            Options = options;
         }
 
-        public async Task<T> SendAsync<T>(string messageBody = null) where T : class, new()
+        public FreshBooksClientAuthStrategy AuthStrategy
         {
-            var response = await SendAsync("POST", _url, messageBody, CancellationToken.None);
-            var responseContent = await response.Content.ReadAsStringAsync();
-            return responseContent.FromXmlString<T>();
+            get
+            {
+                return string.IsNullOrEmpty(Options.Token)
+                    ? FreshBooksClientAuthStrategy.OAuth1A
+                    : FreshBooksClientAuthStrategy.Token;
+            }
         }
 
-        public async Task<T> SendAsync<T>(string method, string messageBody) where T : class, new()
+        public FreshBooksClientOptions Options { get; private set; }
+
+        private async Task<T> SendAsync<T>(string messageBody, CancellationToken token) where T : BaseResponse, new()
         {
-            var response = await SendAsync(method, _url, messageBody, CancellationToken.None);
-            var responseContent = await response.Content.ReadAsStringAsync();
-            return responseContent.FromXmlString<T>();
-        }
-
-        public async Task<T> SendAsync<T>(string method, string messageBody, CancellationToken token) where T : class, new()
-        {
-            var response = await SendAsync(method, _url, messageBody, token);
-            var responseContent = await response.Content.ReadAsStringAsync();
-            return responseContent.FromXmlString<T>();
-        }
-
-        private async Task<HttpResponseMessage> SendAsync(string method, string url, string messageBody, CancellationToken token)
-        {
-
-            if (String.IsNullOrEmpty(url))
-                throw new ArgumentNullException("url");
-
             HttpResponseMessage response = null;
 
-            using (var httpClient = new HttpClient())
-            {
-                var request = new StringContent(messageBody ?? string.Empty);
-                request.Headers.ContentType = new MediaTypeHeaderValue("application/xml");
-                var credentials = Encoding.UTF8.GetBytes(string.Format("{0}:X", this._token));
-                httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Basic", Convert.ToBase64String(credentials));
+            var request = new StringContent(messageBody ?? string.Empty);
+            request.Headers.ContentType = new MediaTypeHeaderValue("application/xml");
 
-                if (method == "GET")
-                {
-                    response = await httpClient.GetAsync(new Uri(url), token);
-                }
-                else if (method == "POST")
-                {
-                    response = await httpClient.PostAsync(new Uri(url), request, token);
-                }
-                else if (method == "PUT")
-                {
-                    response = await httpClient.PutAsync(new Uri(url), request, token);
-                }
-                else if (method == "DELETE")
-                {
-                    response = await httpClient.DeleteAsync(new Uri(url), token);
-                } else
-                {
-                    throw new ArgumentException("Unsupported http method " + method);
-                }
+            if (AuthStrategy == FreshBooksClientAuthStrategy.Token)
+            {
+                var credentials = Encoding.UTF8.GetBytes(string.Format("{0}:X", Options.Token));
+                _httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Basic",
+                    Convert.ToBase64String(credentials));
+            }
+            else
+            {
+
+                throw new NotImplementedException("Current version of this client requires a Token to authenticate!");
             }
 
-            return response;
+            response = await _httpClient.PostAsync(new Uri(_url), request, token);
+
+            var responseContent = await response.Content.ReadAsStringAsync();
+            var dto = responseContent.FromXmlString<T>();
+            dto.StatusCode = response.StatusCode;
+
+            if (!response.IsSuccessStatusCode && Options.ThrowOnFail)
+            {
+                throw new FreshBooksException(response.ReasonPhrase)
+                {
+                    StatusCode = response.StatusCode,
+                    error = dto.error,
+                    code = dto.code
+                };
+            }
+
+            return dto;
         }
     }
 }
