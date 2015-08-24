@@ -31,5 +31,10 @@ namespace FreshBooks.Api
         {
             return await SendAsync<CallbackVerify.response>(request.ToXmlString(), token.GetValueOrDefault(CancellationToken.None));
         }
+		
+        public async Task<CategoryCreate.response> CategoryCreate(CategoryCreate.request request, CancellationToken? token = null)
+        {
+            return await SendAsync<CategoryCreate.response>(request.ToXmlString(), token.GetValueOrDefault(CancellationToken.None));
+        }
 	}
 }

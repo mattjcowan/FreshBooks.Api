@@ -3,6 +3,8 @@
 // Generated items
 // FreshBooks.Api\src\FreshBooks.Api\FreshBooksClient.partial.cs
 // FreshBooks.Api\src\FreshBooks.Api\BaseResponse.cs
+// FreshBooks.Api\src\FreshBooks.Api\CategoryCreateResponse.cs
+// FreshBooks.Api\src\FreshBooks.Api\CategoryCreateRequest.cs
 // FreshBooks.Api\src\FreshBooks.Api\CallbackVerifyResponse.cs
 // FreshBooks.Api\src\FreshBooks.Api\CallbackVerifyRequest.cs
 // FreshBooks.Api\src\FreshBooks.Api\CallbackResendTokenResponse.cs
