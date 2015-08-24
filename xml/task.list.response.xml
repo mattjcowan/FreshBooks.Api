@@ -9,8 +9,18 @@
       <rate>180</rate>
     </task>
     <task>
-    ...
+      <task_id>211</task_id>
+      <name>Research</name>
+      <description></description>
+      <billable>1</billable>
+      <rate>180</rate>
     </task>
-    ...
+    <task>
+      <task_id>211</task_id>
+      <name>Research</name>
+      <description></description>
+      <billable>1</billable>
+      <rate>180</rate>
+    </task>
   </tasks>
 </response>

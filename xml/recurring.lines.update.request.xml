@@ -8,7 +8,13 @@
       <quantity>50.00</quantity>
       <name>Bacon Ration (1lb)</name>
       <unit_cost>2</unit_cost>
-      ...
+    </line>
+    <line>
+      <line_id>1</line_id>
+      <amount>100</amount>
+      <quantity>50.00</quantity>
+      <name>Bacon Ration (1lb)</name>
+      <unit_cost>2</unit_cost>
     </line>
   </lines>
 </request>

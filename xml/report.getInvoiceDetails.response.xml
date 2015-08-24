@@ -2,28 +2,28 @@
 <response xmlns="http://www.freshbooks.com/api/" status="ok">
   <reports>
     <report>
-      <billed>102959905.17</billed>
-      <collected>100046149.96</collected>
-      <outstanding>2913755.21</outstanding>
-      <currency_code>CAD</currency_code>
-    </report>
-    <report>
-      <billed>100.00</billed>
+      <billed>89412.56</billed>
       <collected>0.00</collected>
-      <outstanding>100.00</outstanding>
-      <currency_code>EUR</currency_code>
+      <outstanding>89412.56</outstanding>
+      <currency_code>CAD</currency_code>
+      <year>2014</year>
+      <month>11</month>
     </report>
     <report>
-      <billed>30.00</billed>
-      <collected>30.00</collected>
-      <outstanding>0.00</outstanding>
-      <currency_code>GBP</currency_code>
-    </report>
-    <report>
-      <billed>75394.35</billed>
-      <collected>1951.66</collected>
-      <outstanding>73442.69</outstanding>
+      <billed>4510.00</billed>
+      <collected>0.00</collected>
+      <outstanding>4510.00</outstanding>
       <currency_code>USD</currency_code>
+      <year>2014</year>
+      <month>11</month>
+    </report>
+    <report>
+      <billed>1173500.78</billed>
+      <collected>0.00</collected>
+      <outstanding>1173500.78</outstanding>
+      <currency_code>CAD</currency_code>
+      <year>2014</year>
+      <month>10</month>
     </report>
   </reports>
 </response>

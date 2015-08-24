@@ -73,6 +73,219 @@
     <Compile Include="CategoryCreateResponse.cs">
       <DependentUpon>ServiceTypes.tt</DependentUpon>
     </Compile>
+    <Compile Include="CategoryDeleteRequest.cs">
+      <DependentUpon>ServiceTypes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CategoryDeleteResponse.cs">
+      <DependentUpon>ServiceTypes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CategoryGetRequest.cs">
+      <DependentUpon>ServiceTypes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CategoryGetResponse.cs">
+      <DependentUpon>ServiceTypes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CategoryListHierarchyRequest.cs">
+      <DependentUpon>ServiceTypes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CategoryListHierarchyResponse.cs">
+      <DependentUpon>ServiceTypes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CategoryListRequest.cs">
+      <DependentUpon>ServiceTypes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CategoryListResponse.cs">
+      <DependentUpon>ServiceTypes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CategoryUpdateRequest.cs">
+      <DependentUpon>ServiceTypes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CategoryUpdateResponse.cs">
+      <DependentUpon>ServiceTypes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ClientCreateRequest.cs">
+      <DependentUpon>ServiceTypes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ClientCreateResponse.cs">
+      <DependentUpon>ServiceTypes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ClientDeleteRequest.cs">
+      <DependentUpon>ServiceTypes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ClientDeleteResponse.cs">
+      <DependentUpon>ServiceTypes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ClientGetRequest.cs">
+      <DependentUpon>ServiceTypes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ClientGetResponse.cs">
+      <DependentUpon>ServiceTypes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ClientListRequest.cs">
+      <DependentUpon>ServiceTypes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ClientListResponse.cs">
+      <DependentUpon>ServiceTypes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ClientUpdateRequest.cs">
+      <DependentUpon>ServiceTypes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ClientUpdateResponse.cs">
+      <DependentUpon>ServiceTypes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ContractorCreateRequest.cs">
+      <DependentUpon>ServiceTypes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ContractorCreateResponse.cs">
+      <DependentUpon>ServiceTypes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ContractorDeleteRequest.cs">
+      <DependentUpon>ServiceTypes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ContractorDeleteResponse.cs">
+      <DependentUpon>ServiceTypes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ContractorGetRequest.cs">
+      <DependentUpon>ServiceTypes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ContractorGetResponse.cs">
+      <DependentUpon>ServiceTypes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ContractorListRequest.cs">
+      <DependentUpon>ServiceTypes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ContractorListResponse.cs">
+      <DependentUpon>ServiceTypes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ContractorUpdateRequest.cs">
+      <DependentUpon>ServiceTypes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ContractorUpdateResponse.cs">
+      <DependentUpon>ServiceTypes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CurrencyListRequest.cs">
+      <DependentUpon>ServiceTypes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CurrencyListResponse.cs">
+      <DependentUpon>ServiceTypes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DefaultTermsGetRequest.cs">
+      <DependentUpon>ServiceTypes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DefaultTermsGetResponse.cs">
+      <DependentUpon>ServiceTypes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DefaultTermsListRequest.cs">
+      <DependentUpon>ServiceTypes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DefaultTermsListResponse.cs">
+      <DependentUpon>ServiceTypes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DefaultTermsUpdateRequest.cs">
+      <DependentUpon>ServiceTypes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DefaultTermsUpdateResponse.cs">
+      <DependentUpon>ServiceTypes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EmailTemplateGetRequest.cs">
+      <DependentUpon>ServiceTypes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EmailTemplateGetResponse.cs">
+      <DependentUpon>ServiceTypes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EmailTemplateListRequest.cs">
+      <DependentUpon>ServiceTypes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EmailTemplateListResponse.cs">
+      <DependentUpon>ServiceTypes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EmailTemplateUpdateRequest.cs">
+      <DependentUpon>ServiceTypes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EmailTemplateUpdateResponse.cs">
+      <DependentUpon>ServiceTypes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EstimateAcceptRequest.cs">
+      <DependentUpon>ServiceTypes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EstimateAcceptResponse.cs">
+      <DependentUpon>ServiceTypes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EstimateCreateRequest.cs">
+      <DependentUpon>ServiceTypes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EstimateCreateResponse.cs">
+      <DependentUpon>ServiceTypes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EstimateDeleteRequest.cs">
+      <DependentUpon>ServiceTypes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EstimateDeleteResponse.cs">
+      <DependentUpon>ServiceTypes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EstimateGetPDFRequest.cs">
+      <DependentUpon>ServiceTypes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EstimateGetRequest.cs">
+      <DependentUpon>ServiceTypes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EstimateGetResponse.cs">
+      <DependentUpon>ServiceTypes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EstimateListRequest.cs">
+      <DependentUpon>ServiceTypes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EstimateListResponse.cs">
+      <DependentUpon>ServiceTypes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EstimateMarkAsSentRequest.cs">
+      <DependentUpon>ServiceTypes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EstimateMarkAsSentResponse.cs">
+      <DependentUpon>ServiceTypes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EstimateSendByEmailCustomEmailRequest.cs">
+      <DependentUpon>ServiceTypes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EstimateSendByEmailRequest.cs">
+      <DependentUpon>ServiceTypes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EstimateUpdateRequest.cs">
+      <DependentUpon>ServiceTypes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EstimateUpdateResponse.cs">
+      <DependentUpon>ServiceTypes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ExpenseCreateRequest.cs">
+      <DependentUpon>ServiceTypes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ExpenseCreateResponse.cs">
+      <DependentUpon>ServiceTypes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ExpenseDeleteRequest.cs">
+      <DependentUpon>ServiceTypes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ExpenseDeleteResponse.cs">
+      <DependentUpon>ServiceTypes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ExpenseGetRequest.cs">
+      <DependentUpon>ServiceTypes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ExpenseGetResponse.cs">
+      <DependentUpon>ServiceTypes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ExpenseListRequest.cs">
+      <DependentUpon>ServiceTypes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ExpenseListResponse.cs">
+      <DependentUpon>ServiceTypes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ExpenseUpdateRequest.cs">
+      <DependentUpon>ServiceTypes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ExpenseUpdateResponse.cs">
+      <DependentUpon>ServiceTypes.tt</DependentUpon>
+    </Compile>
     <Compile Include="FreshBooksClient.partial.cs">
       <DependentUpon>ServiceTypes.tt</DependentUpon>
     </Compile>
@@ -80,16 +293,415 @@
     <Compile Include="FreshBooksClientExtensions.cs" />
     <Compile Include="FreshBooksClientOptions.cs" />
     <Compile Include="FreshBooksException.cs" />
+    <Compile Include="GatewayListRequest.cs">
+      <DependentUpon>ServiceTypes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GatewayListResponse.cs">
+      <DependentUpon>ServiceTypes.tt</DependentUpon>
+    </Compile>
     <Compile Include="Helpers\EventNames.cs" />
     <Compile Include="FreshBooksClient.cs" />
     <Compile Include="Helpers\MethodNames.cs" />
+    <Compile Include="InvoiceCreateRequest.cs">
+      <DependentUpon>ServiceTypes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="InvoiceCreateResponse.cs">
+      <DependentUpon>ServiceTypes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="InvoiceDeleteRequest.cs">
+      <DependentUpon>ServiceTypes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="InvoiceGetPDFRequest.cs">
+      <DependentUpon>ServiceTypes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="InvoiceGetRequest.cs">
+      <DependentUpon>ServiceTypes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="InvoiceGetResponse.cs">
+      <DependentUpon>ServiceTypes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="InvoiceLinesAddRequest.cs">
+      <DependentUpon>ServiceTypes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="InvoiceLinesAddResponse.cs">
+      <DependentUpon>ServiceTypes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="InvoiceLinesDeleteRequest.cs">
+      <DependentUpon>ServiceTypes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="InvoiceLinesDeleteResponse.cs">
+      <DependentUpon>ServiceTypes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="InvoiceLinesUpdateRequest.cs">
+      <DependentUpon>ServiceTypes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="InvoiceLinesUpdateResponse.cs">
+      <DependentUpon>ServiceTypes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="InvoiceListRequest.cs">
+      <DependentUpon>ServiceTypes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="InvoiceListResponse.cs">
+      <DependentUpon>ServiceTypes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="InvoiceSendByEmailCustomEmailRequest.cs">
+      <DependentUpon>ServiceTypes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="InvoiceSendByEmailCustomEmailResponse.cs">
+      <DependentUpon>ServiceTypes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="InvoiceSendByEmailRequest.cs">
+      <DependentUpon>ServiceTypes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="InvoiceSendByEmailResponse.cs">
+      <DependentUpon>ServiceTypes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="InvoiceSendBySnailMailRequest.cs">
+      <DependentUpon>ServiceTypes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="InvoiceSendBySnailMailResponse.cs">
+      <DependentUpon>ServiceTypes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="InvoiceUpdateRequest.cs">
+      <DependentUpon>ServiceTypes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="InvoiceUpdateResponse.cs">
+      <DependentUpon>ServiceTypes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ItemCreateRequest.cs">
+      <DependentUpon>ServiceTypes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ItemCreateResponse.cs">
+      <DependentUpon>ServiceTypes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ItemDeleteRequest.cs">
+      <DependentUpon>ServiceTypes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ItemDeleteResponse.cs">
+      <DependentUpon>ServiceTypes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ItemGetRequest.cs">
+      <DependentUpon>ServiceTypes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ItemGetResponse.cs">
+      <DependentUpon>ServiceTypes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ItemListRequest.cs">
+      <DependentUpon>ServiceTypes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ItemListResponse.cs">
+      <DependentUpon>ServiceTypes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ItemUpdateRequest.cs">
+      <DependentUpon>ServiceTypes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ItemUpdateResponse.cs">
+      <DependentUpon>ServiceTypes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="LanguageListRequest.cs">
+      <DependentUpon>ServiceTypes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="LanguageListResponse.cs">
+      <DependentUpon>ServiceTypes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PaymentCreateRequest.cs">
+      <DependentUpon>ServiceTypes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PaymentCreateResponse.cs">
+      <DependentUpon>ServiceTypes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PaymentDeleteRequest.cs">
+      <DependentUpon>ServiceTypes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PaymentDeleteResponse.cs">
+      <DependentUpon>ServiceTypes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PaymentGetRequest.cs">
+      <DependentUpon>ServiceTypes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PaymentGetResponse.cs">
+      <DependentUpon>ServiceTypes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PaymentListRequest.cs">
+      <DependentUpon>ServiceTypes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PaymentListResponse.cs">
+      <DependentUpon>ServiceTypes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PaymentUpdateRequest.cs">
+      <DependentUpon>ServiceTypes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PaymentUpdateResponse.cs">
+      <DependentUpon>ServiceTypes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ProjectCreateRequest.cs">
+      <DependentUpon>ServiceTypes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ProjectCreateResponse.cs">
+      <DependentUpon>ServiceTypes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ProjectDeleteRequest.cs">
+      <DependentUpon>ServiceTypes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ProjectDeleteResponse.cs">
+      <DependentUpon>ServiceTypes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ProjectGetRequest.cs">
+      <DependentUpon>ServiceTypes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ProjectGetResponse.cs">
+      <DependentUpon>ServiceTypes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ProjectListRequest.cs">
+      <DependentUpon>ServiceTypes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ProjectListResponse.cs">
+      <DependentUpon>ServiceTypes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ProjectUpdateRequest.cs">
+      <DependentUpon>ServiceTypes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ProjectUpdateResponse.cs">
+      <DependentUpon>ServiceTypes.tt</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Helpers\XmlHelper.cs" />
     <Compile Include="Helpers\DesignerCategoryAttribute.cs" />
     <Compile Include="Helpers\SerializableAttribute.cs" />
+    <Compile Include="ReceiptCreateRequest.cs">
+      <DependentUpon>ServiceTypes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ReceiptCreateResponse.cs">
+      <DependentUpon>ServiceTypes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ReceiptDeleteRequest.cs">
+      <DependentUpon>ServiceTypes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ReceiptDeleteResponse.cs">
+      <DependentUpon>ServiceTypes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ReceiptGetRequest.cs">
+      <DependentUpon>ServiceTypes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ReceiptUpdateRequest.cs">
+      <DependentUpon>ServiceTypes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ReceiptUpdateResponse.cs">
+      <DependentUpon>ServiceTypes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RecurringCreateRequest.cs">
+      <DependentUpon>ServiceTypes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RecurringCreateResponse.cs">
+      <DependentUpon>ServiceTypes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RecurringDeleteRequest.cs">
+      <DependentUpon>ServiceTypes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RecurringDeleteResponse.cs">
+      <DependentUpon>ServiceTypes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RecurringGetRequest.cs">
+      <DependentUpon>ServiceTypes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RecurringGetResponse.cs">
+      <DependentUpon>ServiceTypes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RecurringLinesAddRequest.cs">
+      <DependentUpon>ServiceTypes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RecurringLinesAddResponse.cs">
+      <DependentUpon>ServiceTypes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RecurringLinesDeleteRequest.cs">
+      <DependentUpon>ServiceTypes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RecurringLinesDeleteResponse.cs">
+      <DependentUpon>ServiceTypes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RecurringLinesUpdateRequest.cs">
+      <DependentUpon>ServiceTypes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RecurringLinesUpdateResponse.cs">
+      <DependentUpon>ServiceTypes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RecurringListRequest.cs">
+      <DependentUpon>ServiceTypes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RecurringListResponse.cs">
+      <DependentUpon>ServiceTypes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RecurringUpdateRequest.cs">
+      <DependentUpon>ServiceTypes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RecurringUpdateResponse.cs">
+      <DependentUpon>ServiceTypes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ReportGetClientDetailsRequest.cs">
+      <DependentUpon>ServiceTypes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ReportGetClientDetailsResponse.cs">
+      <DependentUpon>ServiceTypes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ReportGetEstimateDetailsRequest.cs">
+      <DependentUpon>ServiceTypes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ReportGetEstimateDetailsResponse.cs">
+      <DependentUpon>ServiceTypes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ReportGetExpenseDetailsRequest.cs">
+      <DependentUpon>ServiceTypes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ReportGetExpenseDetailsResponse.cs">
+      <DependentUpon>ServiceTypes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ReportGetInvoiceDetailsRequest.cs">
+      <DependentUpon>ServiceTypes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ReportGetInvoiceDetailsResponse.cs">
+      <DependentUpon>ServiceTypes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ReportGetProfitDetailsRequest.cs">
+      <DependentUpon>ServiceTypes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ReportGetProfitDetailsResponse.cs">
+      <DependentUpon>ServiceTypes.tt</DependentUpon>
+    </Compile>
     <Compile Include="ServiceTypes.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
+      <DependentUpon>ServiceTypes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="StaffCreateRequest.cs">
+      <DependentUpon>ServiceTypes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="StaffCreateResponse.cs">
+      <DependentUpon>ServiceTypes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="StaffCurrentRequest.cs">
+      <DependentUpon>ServiceTypes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="StaffCurrentResponse.cs">
+      <DependentUpon>ServiceTypes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="StaffDeleteRequest.cs">
+      <DependentUpon>ServiceTypes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="StaffDeleteResponse.cs">
+      <DependentUpon>ServiceTypes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="StaffGetRequest.cs">
+      <DependentUpon>ServiceTypes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="StaffGetResponse.cs">
+      <DependentUpon>ServiceTypes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="StaffListRequest.cs">
+      <DependentUpon>ServiceTypes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="StaffListResponse.cs">
+      <DependentUpon>ServiceTypes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="StaffUpdateRequest.cs">
+      <DependentUpon>ServiceTypes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="StaffUpdateResponse.cs">
+      <DependentUpon>ServiceTypes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SystemCurrentRequest.cs">
+      <DependentUpon>ServiceTypes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SystemCurrentResponse.cs">
+      <DependentUpon>ServiceTypes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TaskCreateRequest.cs">
+      <DependentUpon>ServiceTypes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TaskCreateResponse.cs">
+      <DependentUpon>ServiceTypes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TaskDeleteRequest.cs">
+      <DependentUpon>ServiceTypes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TaskDeleteResponse.cs">
+      <DependentUpon>ServiceTypes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TaskGetRequest.cs">
+      <DependentUpon>ServiceTypes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TaskGetResponse.cs">
+      <DependentUpon>ServiceTypes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TaskListRequest.cs">
+      <DependentUpon>ServiceTypes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TaskListResponse.cs">
+      <DependentUpon>ServiceTypes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TaskUpdateRequest.cs">
+      <DependentUpon>ServiceTypes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TaskUpdateResponse.cs">
+      <DependentUpon>ServiceTypes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TaxCreateRequest.cs">
+      <DependentUpon>ServiceTypes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TaxCreateResponse.cs">
+      <DependentUpon>ServiceTypes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TaxDeleteRequest.cs">
+      <DependentUpon>ServiceTypes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TaxDeleteResponse.cs">
+      <DependentUpon>ServiceTypes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TaxGetRequest.cs">
+      <DependentUpon>ServiceTypes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TaxGetResponse.cs">
+      <DependentUpon>ServiceTypes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TaxListRequest.cs">
+      <DependentUpon>ServiceTypes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TaxListResponse.cs">
+      <DependentUpon>ServiceTypes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TaxUpdateRequest.cs">
+      <DependentUpon>ServiceTypes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TaxUpdateResponse.cs">
+      <DependentUpon>ServiceTypes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TimeEntryCreateRequest.cs">
+      <DependentUpon>ServiceTypes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TimeEntryCreateResponse.cs">
+      <DependentUpon>ServiceTypes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TimeEntryDeleteRequest.cs">
+      <DependentUpon>ServiceTypes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TimeEntryDeleteResponse.cs">
+      <DependentUpon>ServiceTypes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TimeEntryGetRequest.cs">
+      <DependentUpon>ServiceTypes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TimeEntryGetResponse.cs">
+      <DependentUpon>ServiceTypes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TimeEntryListRequest.cs">
+      <DependentUpon>ServiceTypes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TimeEntryListResponse.cs">
+      <DependentUpon>ServiceTypes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TimeEntryUpdateRequest.cs">
+      <DependentUpon>ServiceTypes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TimeEntryUpdateResponse.cs">
       <DependentUpon>ServiceTypes.tt</DependentUpon>
     </Compile>
   </ItemGroup>

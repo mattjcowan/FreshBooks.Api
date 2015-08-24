@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <response xmlns="http://www.freshbooks.com/api/" status="ok">
-  <recurring_id>111</invoice_id>
+  <recurring_id>111</recurring_id>
   <lines>
     <line_id>45</line_id>
     <line_id>46</line_id>

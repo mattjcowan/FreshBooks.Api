@@ -9,7 +9,6 @@
       <unit_cost>2</unit_cost>
       <quantity>40</quantity>
       <type>Item</type>
-            ...
     </line>
     <line>
       <amount>22.30</amount>
@@ -18,7 +17,6 @@
       <unit_cost>1</unit_cost>
       <quantity>22.30</quantity>
       <type>Item</type>
-      ...
     </line>
   </lines>
 </request>

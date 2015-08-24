@@ -6,15 +6,15 @@
       <line_id>1</line_id>
       <amount>50</amount>
       <name>Premium Yak Shaving</name>
-      <unit_cost>12.50</unit_cost>
-          ...
-      </line>
-      <line>
-        <line_id>2</line_id>
-        <amount>30</amount>
-        <name>Advanced Telephone Sanitizing</name>
-        <quantity>3.00</quantity>
-        ...
-      </line>
+      <unit_cost>10</unit_cost>
+      <quantity>4</quantity>
+  </line>
+  <line>
+	<line_id>2</line_id>
+	<amount>30</amount>
+	<name>Advanced Telephone Sanitizing</name>
+      <unit_cost>10</unit_cost>
+      <quantity>4</quantity>
+  </line>
   </lines>
 </request>

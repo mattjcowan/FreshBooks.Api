@@ -38,6 +38,5 @@
       <tax2_percent></tax2_percent>
       <tax2_amount></tax2_amount>
     </expense>
-    ...
   </expenses>
 </response>

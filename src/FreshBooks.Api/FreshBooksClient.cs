@@ -39,28 +39,29 @@ namespace FreshBooks.Api
 
         public FreshBooksClientOptions Options { get; private set; }
 
+        private async Task<byte[]> GetBytesAsync(string messageBody, CancellationToken token)
+        {
+            var response = await GetResponseAsync(messageBody, token);
+
+            var buffer = await response.Content.ReadAsByteArrayAsync();
+
+            if (!response.IsSuccessStatusCode && Options.ThrowOnFail)
+            {
+                throw new FreshBooksException(response.ReasonPhrase)
+                {
+                    StatusCode = response.StatusCode
+                };
+            }
+
+            return buffer;
+        }
+
         private async Task<T> SendAsync<T>(string messageBody, CancellationToken token) where T : BaseResponse, new()
         {
-            HttpResponseMessage response = null;
-
-            var request = new StringContent(messageBody ?? string.Empty);
-            request.Headers.ContentType = new MediaTypeHeaderValue("application/xml");
-
-            if (AuthStrategy == FreshBooksClientAuthStrategy.Token)
-            {
-                var credentials = Encoding.UTF8.GetBytes(string.Format("{0}:X", Options.Token));
-                _httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Basic",
-                    Convert.ToBase64String(credentials));
-            }
-            else
-            {
-
-                throw new NotImplementedException("Current version of this client requires a Token to authenticate!");
-            }
-
-            response = await _httpClient.PostAsync(new Uri(_url), request, token);
+            var response = await GetResponseAsync(messageBody, token);
 
             var responseContent = await response.Content.ReadAsStringAsync();
+
             var dto = responseContent.FromXmlString<T>();
             dto.StatusCode = response.StatusCode;
 
@@ -75,6 +76,28 @@ namespace FreshBooks.Api
             }
 
             return dto;
+        }
+
+        private async Task<HttpResponseMessage> GetResponseAsync(string messageBody, CancellationToken token)
+        {
+            HttpResponseMessage response = null;
+
+            var request = new StringContent(messageBody ?? string.Empty);
+            request.Headers.ContentType = new MediaTypeHeaderValue("application/xml");
+
+            if (AuthStrategy == FreshBooksClientAuthStrategy.Token)
+            {
+                var credentials = Encoding.UTF8.GetBytes(string.Format("{0}:X", Options.Token));
+                _httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Basic",
+                    Convert.ToBase64String(credentials));
+            }
+            else
+            {
+                throw new NotImplementedException("Current version of this client requires a Token to authenticate!");
+            }
+
+            response = await _httpClient.PostAsync(new Uri(_url), request, token);
+            return response;
         }
     }
 }

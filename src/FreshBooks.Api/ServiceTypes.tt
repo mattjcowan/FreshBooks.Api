@@ -35,8 +35,10 @@
 	var xmlDir = xmlDirInfo.FullName;
 	Log(outputWindow, "xmlDirInfo: " + xmlDirInfo.FullName);
 	
+	var classNames = new List<string>();
     foreach(var file in xmlDirInfo.GetFiles("*.xml")) {
 
+		Log(outputWindow, "Now processing file: " + file.Name);
         var xmlFile = Path.Combine(xmlDir, file.Name);
         var xsdFile = Path.Combine(xmlDir, file.Name.Replace(".xml", ".xsd"));
 
@@ -66,7 +68,7 @@
 
     // iterate through each XSD file in our /Schema/ directory
     // and output the generated C# file in this directory.
-	var allNamespaces = new List<string>();
+	var allNamespaces = new Dictionary<string, string>();
     foreach(var file in new DirectoryInfo(xmlDir).GetFiles("*.xsd")) {
 
         // ouput file should be the directory of this template, with .Generated.cs
@@ -93,12 +95,15 @@
 		var addOnNamespace = csFileName.Replace("Request", "").Replace("Response", "");
 		var csNamespace =  (currentNamespace + "." + addOnNamespace);
 		Log(outputWindow, "namespace: " + csNamespace);
-		if(!allNamespaces.Contains(addOnNamespace))
-			allNamespaces.Add(addOnNamespace);
+		if(!allNamespaces.ContainsKey(addOnNamespace))
+			allNamespaces.Add(addOnNamespace, file.FullName);
 
 		manager.StartNewFile(csFileName + ".cs");
-		#><#= CleanCs(csFileName, file.Name, GenerateFromXsd(outputWindow, file.FullName, csNamespace)) #>
+		string code = CleanCs(csFileName, file.Name, GenerateFromXsd(outputWindow, file.FullName, csNamespace));
+		#><#= code #>
 		<#
+		classNames.AddRange(code.Split('\r','\n').Where(l => l.Contains("public partial class")).Select(s => s.Replace("public partial class", "").Replace("{", "").Trim()));
+
 		File.Delete(file.FullName);
     }
 #><#
@@ -125,16 +130,28 @@ namespace FreshBooks.Api
 {
     public partial class FreshBooksClient
     {
-<# foreach(var ns in allNamespaces) {#>		
+<# foreach(var ns in allNamespaces.Keys) {
+		if(File.Exists(allNamespaces[ns].Replace("request","response").Replace("xsd","xml"))) {
+#>		
         public async Task<<#=ns#>.response> <#=ns#>(<#=ns#>.request request, CancellationToken? token = null)
         {
             return await SendAsync<<#=ns#>.response>(request.ToXmlString(), token.GetValueOrDefault(CancellationToken.None));
         }
-<#}#>
+<#
+		} else {
+#>		
+        public async Task<byte[]> <#=ns#>(<#=ns#>.request request, CancellationToken? token = null)
+        {
+            return await GetBytesAsync(request.ToXmlString(), token.GetValueOrDefault(CancellationToken.None));
+        }
+<#
+		}
+  }#>
 	}
 }
 <#
 	manager.Process();
+	Log(outputWindow, "------- CLASS NAMES --------\n" + string.Join("\n", classNames.Distinct().ToArray()));
 #>
 <#+
 

@@ -1,0 +1,29 @@
+<!--?xml version="1.0" encoding="utf-8"?-->
+<response xmlns="http://www.freshbooks.com/api/" status="ok">
+  <reports>
+    <report>
+      <income>456.96</income>
+      <expenses>597.56</expenses>
+      <profit>-140.60</profit>
+      <currency_code>USD</currency_code>
+      <year>2014</year>
+      <month>01</month>
+    </report>
+    <report>
+      <income>912.41</income>
+      <expenses>204.88</expenses>
+      <profit>707.53</profit>
+      <currency_code>USD</currency_code>
+      <year>2014</year>
+      <month>02</month>
+    </report>
+    <report>
+      <income>102.24</income>
+      <expenses>97.56</expenses>
+      <profit>4.68</profit>
+      <currency_code>USD</currency_code>
+      <year>2014</year>
+      <month>03</month>
+    </report>
+  </reports>
+</response>
