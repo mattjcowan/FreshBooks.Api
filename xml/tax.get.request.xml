@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<request method="tax.get">
+  <tax_id>18</tax_id>
+</request>

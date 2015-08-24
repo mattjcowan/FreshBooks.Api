@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<request method="expense.list">
+  <!--Filter by client (Optional) -->
+  <client_id>3</client_id>
+  <!--Filter by date range (Optional) -->
+  <date_from>2009-10-31</date_from>
+  <date_to>2010-2-28</date_to>
+  <!--One of 'active', 'archived', 'deleted' (Optional) -->
+  <folder>active</folder>
+</request>

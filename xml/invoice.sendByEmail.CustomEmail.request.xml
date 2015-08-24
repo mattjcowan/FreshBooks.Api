@@ -1,0 +1,6 @@
+<!--?xml version="1.0" encoding="utf-8"?-->
+<request method="invoice.sendByEmail">
+  <invoice_id>344</invoice_id>
+  <subject>This is a custom subject!</subject>
+  <message>You have a new invoice. Get it here: ::invoice link::</message>
+</request>

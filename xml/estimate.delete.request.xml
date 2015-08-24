@@ -1,0 +1,4 @@
+<!--?xml version="1.0" encoding="utf-8"?-->
+<request method="estimate.delete">
+  <estimate_id>103</estimate_id>
+</request>

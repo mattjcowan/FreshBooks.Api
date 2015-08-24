@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<response xmlns="http://www.freshbooks.com/api/" status="ok">
+  <tax_id>18</tax_id>
+</response>

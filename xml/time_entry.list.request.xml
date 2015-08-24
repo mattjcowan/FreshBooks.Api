@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<request method="time_entry.list">
+  <page>1</page>                        <!-- The page number to show (Optional) -->
+  <per_page>15</per_page>               <!-- Number of results per page, default 25 (Optional) -->
+</request>

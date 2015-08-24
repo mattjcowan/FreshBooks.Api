@@ -1,0 +1,4 @@
+<!--?xml version="1.0" encoding="utf-8"?-->
+<request method="invoice.sendByEmail">
+  <invoice_id>344</invoice_id>
+</request>

@@ -1,0 +1,40 @@
+<!--?xml version="1.0" encoding="utf-8"?-->
+<response xmlns="http://www.freshbooks.com/api/" status="ok">
+    <contractors page="1" per_page="25" pages="1" total="2">
+        <contractor>
+            <contractor_id>22</contractor_id>
+            <name>Test Contractor</name>
+            <email>test@freshbooks.com</email>
+            <status>accepted</status>
+            <rate>10</rate>
+            <task_id>6</task_id>
+            <projects>
+                <project>
+                    <project_id>1</project_id>
+                </project>
+                <project>
+                    <project_id>2</project_id>
+                </project>
+                <project>
+                    <project_id>3</project_id>
+                </project>
+            </projects>
+        </contractor>
+        <contractor>
+            <contractor_id>5</contractor_id>
+            <name>Test Contractor 2</name>
+            <email>test2@freshbooks.com</email>
+            <status>accepted</status>
+            <rate>150</rate>
+            <task_id>2</task_id>
+            <projects>
+                <project>
+                    <project_id>4</project_id>
+                </project>
+                <project>
+                    <project_id>7</project_id>
+                </project>
+            </projects>
+        </contractor>
+    </contractors>
+</response>

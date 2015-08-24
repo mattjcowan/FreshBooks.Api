@@ -1,0 +1,8 @@
+<!--?xml version="1.0" encoding="utf-8"?-->
+<request method="report.getProfitDetails">
+    <!-- The fields below are REQUIRED -->
+   <date_from>YYYY-MM-DD</date_from>
+   <date_to>YYYY-MM-DD</date_to>
+   <!-- The fields below are OPTIONAL -->
+   <group_by>date</group_by>
+</request>

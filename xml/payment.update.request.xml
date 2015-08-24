@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<request method="payment.update">
+  <payment>
+    <payment_id>103</payment_id>
+    <amount>0.00</amount>
+    <notes>Payment refunded.</notes>
+    <currency_code>CAD</currency_code>
+  </payment>
+</request>

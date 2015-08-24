@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<response xmlns="http://www.freshbooks.com/api/" status="ok">
+  <languages page="1" per_page="25" pages="1" total="12">
+    <language>
+      <code>en</code>
+      <name>English</name>
+    </language>
+    <language>
+      <code>fr</code>
+      <name>French</name>
+    </language>
+    <language>
+      <code>da</code>
+      <name>Danish</name>
+    </language>
+    <language>
+      <code>nl</code>
+      <name>Dutch</name>
+    </language>
+    <language>
+      <code>et</code>
+      <name>Estonian</name>
+    </language>
+    <language>
+      <code>de</code>
+      <name>German</name>
+    </language>
+    <language>
+      <code>it</code>
+      <name>Italian</name>
+    </language>
+    <language>
+      <code>no</code>
+      <name>Norwegian</name>
+    </language>
+    <language>
+      <code>pt</code>
+      <name>Portuguese</name>
+    </language>
+    <language>
+      <code>es</code>
+      <name>Spanish</name>
+    </language>
+    <language>
+      <code>es-419</code>
+      <name>Spanish (Latin America)</name>
+    </language>
+    <language>
+      <code>sv</code>
+      <name>Swedish</name>
+    </language>
+  </languages>
+</response>

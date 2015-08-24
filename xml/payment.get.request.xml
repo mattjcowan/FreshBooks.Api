@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<request method="payment.get">
+  <payment_id>322</payment_id>
+</request>

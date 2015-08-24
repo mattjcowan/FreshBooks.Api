@@ -1,0 +1,11 @@
+<!--?xml version="1.0" encoding="utf-8"?-->
+<response xmlns="http://www.freshbooks.com/api/" status="ok">
+  <reports>
+    <report>
+      <currency_code>CAD</currency_code>
+      <estimated>1012.00</estimated>
+      <accepted>560.00</accepted>
+      <invoiced>468.07</invoiced>
+    </report>
+  </reports>
+</response>

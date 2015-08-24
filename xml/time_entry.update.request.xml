@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<request method="time_entry.update">
+  <time_entry>
+    <time_entry_id>211</time_entry_id>
+    # Remaining params are same as time_entry.create
+  </time_entry>
+</request>

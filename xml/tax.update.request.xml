@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<request method="tax.update">
+    <tax>
+        <tax_id>1</tax_id>                <!-- tax to update -->
+        <rate>15</rate>
+        <name>new_name</name>
+        <compound>0</compound>
+    </tax>
+</request>

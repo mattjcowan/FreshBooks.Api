@@ -1,0 +1,55 @@
+<!--?xml version="1.0" encoding="utf-8"?-->
+<response xmlns="http://www.freshbooks.com/api/" status="ok">
+  <estimate>
+    <estimate_id>00000000001</estimate_id>
+    <number>0000001</number>
+    <client_id>5</client_id>
+    <contacts>
+        <contact>
+            <contact_id>0</contact_id>
+        </contact>
+    </contacts>
+    <staff_id>1</staff_id>
+    <organization>Sample Organization</organization>
+    <first_name>John</first_name>
+    <last_name>Smith</last_name>
+    <p_street1>123 Fake St.</p_street1>
+    <p_street2>Apt 123</p_street2>
+    <p_city>New York</p_city>
+    <p_state>New York</p_state>
+    <p_country>United States</p_country>
+    <p_code>553132</p_code>
+    <vat_name></vat_name>
+    <vat_number></vat_number>
+    <po_number>84</po_number>
+    <folder>active</folder>
+    <status></status>
+    <amount>40</amount>
+    <currency_code>CAD</currency_code>
+    <language>en</language>
+    <date>2009-07-21</date>
+    <notes>Some notes for the customer to see.</notes>
+    <terms>Once accepted, payment must be made in 30 days.</terms>
+    <discount>10</discount>
+    <url deprecated="true">https://sample.freshbooks.com/view/3R8gdDNVJ8uDpC6X</url>
+    <auth_url deprecated="true">https://sample.freshbooks.com/estimates/00000000001</auth_url>
+    <links>
+      <client_view>https://sample.freshbooks.com/view/3R8gdDNVJ8uDpC6X</client_view>
+      <view>https://sample.freshbooks.com/estimates/00000000001</view>
+    </links>
+    <lines>
+      <line>
+        <name>Yard Work</name>
+        <description>Mowed the Lawn</description>
+        <unit_cost>10</unit_cost>
+        <quantity>4</quantity>
+        <amount>40</amount>
+        <tax1_name>GST</tax1_name>
+        <tax2_name>PST</tax2_name>
+        <tax1_percent>5</tax1_percent>
+        <tax2_percent>8</tax2_percent>
+        <type>Item</type>
+      </line>
+    </lines>
+  </estimate>
+</response>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<request method="expense.create">
+  <expense>
+    <staff_id>0</staff_id>          <!-- (Required) Your staff ID number -->
+    <category_id>5</category_id>    <!-- (Required) The ID associated with categories like Automobile, Contractors, etc -->
+    <project_id>10</project_id>     <!-- (Optional) Related project as ID -->
+    <client_id>10</client_id>       <!-- (Optional) Specifically assigned to this client -->
+    <amount>29.95</amount>          <!-- (Required) Associated cost -->
+    <vendor>FreshBooks</vendor>     <!-- (Optional) Associated vendor name -->
+    <date>2008-11-01</date>         <!-- (Optional) Applicable date -->
+    <notes>Software package.</notes>     <!-- (Optional) -->
+    <!-- Inputs from the status field are not saved. Values can be integers-->
+    <status>1</status>
+    <tax1_name></tax1_name>              <!-- (Optional) -->
+    <tax1_percent></tax1_percent>        <!-- (Optional) -->
+    <tax1_amount></tax1_amount>          <!-- (Optional) -->
+    <tax2_name></tax2_name>              <!-- (Optional) -->
+    <tax2_percent></tax2_percent>        <!-- (Optional) -->
+    <tax2_amount></tax2_amount>          <!-- (Optional) -->
+  </expense>
+</request>

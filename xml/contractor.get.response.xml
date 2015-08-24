@@ -1,0 +1,12 @@
+<!--?xml version="1.0" encoding="utf-8"?-->
+<response xmlns="http://www.freshbooks.com/api/" status="ok">
+    <contractor>
+        <contractor_id>36</contractor_id>
+        <name>Test</name>
+        <email>test@testing.com</email>
+        <status>invited</status> <!-- 'invited' or 'accepted' -->
+        <rate>100</rate>
+        <task_id>1</task_id>
+        <projects></projects>
+    </contractor>
+</response>

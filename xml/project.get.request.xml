@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<request method="project.get">
+  <project_id>6</project_id>
+</request>

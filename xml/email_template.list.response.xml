@@ -1,0 +1,263 @@
+<!--?xml version="1.0" encoding="utf-8"?-->
+<response xmlns="http://www.freshbooks.com/api/" status="ok">
+  <email_templates>
+    <email_template>
+      <type>new_credit</type>
+      <subject>New credit ::credit number:: from ::company name::, sent using FreshBooks</subject>
+      You have received credit in the amount of ::payment amount::. To view it and download a PDF copy for your records, click the link below.
+::credit link::
+      <required_params>
+        <required_param>credit link</required_param>
+      </required_params>
+      <optional_params>
+        <optional_param>credit number</optional_param>
+        <optional_param>credit link</optional_param>
+        <optional_param>payment amount</optional_param>
+        <optional_param>company name</optional_param>
+        <optional_param>client organization</optional_param>
+        <optional_param>first name</optional_param>
+        <optional_param>last name</optional_param>
+      </optional_params>
+    </email_template>
+    <email_template>
+      <type>new_invoice</type>
+      <subject>New invoice ::invoice number:: from ::company name::</subject>
+      To view your invoice from ::company name:: click the link below: ::invoice link::
+      <required_params>
+        <required_param>invoice link</required_param>
+      </required_params>
+      <optional_params>
+        <optional_param>invoice number</optional_param>
+        <optional_param>invoice link</optional_param>
+        <optional_param>payment amount</optional_param>
+        <optional_param>amount owed</optional_param>
+        <optional_param>company name</optional_param>
+        <optional_param>client organization</optional_param>
+        <optional_param>first name</optional_param>
+        <optional_param>last name</optional_param>
+      </optional_params>
+    </email_template>
+    <email_template>
+      <type>payment_notification</type>
+      <subject>::company name:: has received your payment for invoice ::invoice number:: in FreshBooks</subject>
+      Thank you for your business.
+We have received your payment in the amount of ::payment amount:: for invoice ::invoice number::.
+To view the paid invoice or download a PDF copy for your records, click the link below:
+::invoice link::
+      <enabled>0</enabled>
+      <optional_params>
+        <optional_param>invoice number</optional_param>
+        <optional_param>invoice link</optional_param>
+        <optional_param>login link</optional_param>
+        <optional_param>payment amount</optional_param>
+        <optional_param>amount owed</optional_param>
+        <optional_param>company name</optional_param>
+        <optional_param>client organization</optional_param>
+        <optional_param>first name</optional_param>
+        <optional_param>last name</optional_param>
+      </optional_params>
+    </email_template>
+    <email_template>
+      <type>credit_card_expiry</type>
+      <subject>Action required: Your credit card on file with ::company name:: is expiring soon in FreshBooks</subject>
+      Dear ::first name::,
+The credit card we have on file will expire this month.
+To update your information, kindly:
+1. Access your account here: ::client home::.
+2. Click on "Profile" near the top right of the page.
+3. Enter your new credit card information.
+4. Click "Save" at the bottom of the page.
+If you have any questions, or if you would like to have us update your credit card information for you, please contact us.
+      <enabled>1</enabled>
+      <required_params>
+        <required_param>client home</required_param>
+      </required_params>
+      <optional_params>
+        <optional_param>client home</optional_param>
+        <optional_param>company name</optional_param>
+        <optional_param>client organization</optional_param>
+        <optional_param>first name</optional_param>
+        <optional_param>last name</optional_param>
+      </optional_params>
+    </email_template>
+    <email_template>
+      <type>credit_card_failure</type>
+      <subject>Action required: Your credit card on file for invoice ::invoice number:: from ::company name:: needs updating in FreshBooks</subject>
+      Dear ::first name::,
+A credit card transaction we have attempted to process for your account has failed twice. It is likely that the credit card information we have on file for you is not up-to-date. To update your information, kindly:
+1. Access your account here: ::client home::.
+2. Click on "Profile", near the top right of the page.
+3. Enter your new credit card information.
+4. Click "Save" at the bottom of the page.
+If you have any questions, or if you would like to have us update your credit card information for you, please contact us.
+      <enabled>0</enabled>
+      <required_params>
+        <required_param>client home</required_param>
+      </required_params>
+      <optional_params>
+        <optional_param>client home</optional_param>
+        <optional_param>company name</optional_param>
+        <optional_param>client organization</optional_param>
+        <optional_param>first name</optional_param>
+        <optional_param>last name</optional_param>
+      </optional_params>
+    </email_template>
+    <email_template>
+      <type>new_estimate</type>
+      <subject>New estimate ::estimate number:: from ::company name::, sent using FreshBooks</subject>
+      To access your estimate from ::company name:: for ::payment amount::, go to:
+::estimate link::
+      <required_params>
+        <required_param>estimate link</required_param>
+      </required_params>
+      <optional_params>
+        <optional_param>estimate number</optional_param>
+        <optional_param>estimate link</optional_param>
+        <optional_param>payment amount</optional_param>
+        <optional_param>company name</optional_param>
+        <optional_param>client organization</optional_param>
+        <optional_param>first name</optional_param>
+        <optional_param>last name</optional_param>
+      </optional_params>
+    </email_template>
+    <email_template>
+      <type>new_client</type>
+      <subject>::company name:: is now invoicing you with FreshBooks</subject>
+      Welcome to ::company name::'s secure online services.  An account has been created for you.
+To securely access your account, go to:
+::login link::
+Login using the following username and password:
+Username: ::username::
+Password: ::password::
+      <required_params>
+        <required_param>username</required_param>
+        <required_param>password</required_param>
+      </required_params>
+      <optional_params>
+        <optional_param>login link</optional_param>
+        <optional_param>company name</optional_param>
+        <optional_param>client organization</optional_param>
+        <optional_param>first name</optional_param>
+        <optional_param>last name</optional_param>
+        <optional_param>username</optional_param>
+        <optional_param>password</optional_param>
+      </optional_params>
+    </email_template>
+    <email_template>
+      <type>new_staff</type>
+      <subject>::company name:: invites you to track time and expenses in FreshBooks</subject>
+      You are now part of ::company name::'s team.
+Click here to log in to your account:
+::login link::
+Username: ::username::
+Password: ::password::
+      <required_params>
+        <required_param>username</required_param>
+        <required_param>password</required_param>
+      </required_params>
+      <optional_params>
+        <optional_param>login link</optional_param>
+        <optional_param>company name</optional_param>
+        <optional_param>first name</optional_param>
+        <optional_param>last name</optional_param>
+        <optional_param>username</optional_param>
+        <optional_param>password</optional_param>
+      </optional_params>
+    </email_template>
+    <email_template>
+      <type>new_support_ticket</type>
+      <subject>[::company name::] has created a new support ticket in FreshBooks</subject>
+      To access your support ticket from ::company name::, go to:
+::ticket link::
+      <required_params>
+        <required_param>ticket link</required_param>
+      </required_params>
+      <optional_params>
+        <optional_param>ticket link</optional_param>
+        <optional_param>company name</optional_param>
+        <optional_param>client organization</optional_param>
+        <optional_param>first name</optional_param>
+        <optional_param>last name</optional_param>
+      </optional_params>
+    </email_template>
+    <email_template>
+      <type>update_support_ticket</type>
+      <subject>[::company name::] has updated your support ticket in FreshBooks</subject>
+      To access your updated support ticket from ::company name::, go to:
+::ticket link::
+      <required_params>
+        <required_param>ticket link</required_param>
+      </required_params>
+      <optional_params>
+        <optional_param>ticket link</optional_param>
+        <optional_param>company name</optional_param>
+        <optional_param>client organization</optional_param>
+        <optional_param>first name</optional_param>
+        <optional_param>last name</optional_param>
+      </optional_params>
+    </email_template>
+    <email_template>
+      <type>late_payment_reminder_first</type>
+      <subject>[::company name::] Invoice Notice</subject>
+      Your invoice is now 30 days overdue.  Please pay your invoice.
+To access your invoice from ::company name::, go to:
+::invoice link::
+      <enabled>0</enabled>
+      <required_params>
+        <required_param>invoice link</required_param>
+      </required_params>
+      <optional_params>
+        <optional_param>invoice number</optional_param>
+        <optional_param>invoice link</optional_param>
+        <optional_param>payment amount</optional_param>
+        <optional_param>amount owed</optional_param>
+        <optional_param>company name</optional_param>
+        <optional_param>client organization</optional_param>
+        <optional_param>first name</optional_param>
+        <optional_param>last name</optional_param>
+      </optional_params>
+    </email_template>
+    <email_template>
+      <type>late_payment_reminder_second</type>
+      <subject>[::company name::] Invoice Notice</subject>
+      Your invoice is now 60 days overdue.  Please pay your invoice.
+To access your invoice from ::company name::, go to:
+::invoice link::
+      <enabled>0</enabled>
+      <required_params>
+        <required_param>invoice link</required_param>
+      </required_params>
+      <optional_params>
+        <optional_param>invoice number</optional_param>
+        <optional_param>invoice link</optional_param>
+        <optional_param>payment amount</optional_param>
+        <optional_param>amount owed</optional_param>
+        <optional_param>company name</optional_param>
+        <optional_param>client organization</optional_param>
+        <optional_param>first name</optional_param>
+        <optional_param>last name</optional_param>
+      </optional_params>
+    </email_template>
+    <email_template>
+      <type>late_payment_reminder_third</type>
+      <subject>[::company name::] Invoice Notice</subject>
+      Your invoice is now 90 days overdue.  Please pay your invoice.
+To access your invoice from ::company name::, go to:
+::invoice link::
+      <enabled>0</enabled>
+      <required_params>
+        <required_param>invoice link</required_param>
+      </required_params>
+      <optional_params>
+        <optional_param>invoice number</optional_param>
+        <optional_param>invoice link</optional_param>
+        <optional_param>payment amount</optional_param>
+        <optional_param>amount owed</optional_param>
+        <optional_param>company name</optional_param>
+        <optional_param>client organization</optional_param>
+        <optional_param>first name</optional_param>
+        <optional_param>last name</optional_param>
+      </optional_params>
+    </email_template>
+  </email_templates>
+</response>

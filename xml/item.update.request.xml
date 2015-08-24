@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<request method="item.update">
+  <item>
+    <item_id>18</item_id>
+    <name>Cheap Slippers</name>             <!-- (Optional) -->
+    <description>Super tight!</description> <!-- (Optional) -->
+    <unit_cost>34.99</unit_cost>            <!-- (Optional) -->
+    <quantity>1</quantity>                  <!-- (Optional) -->
+    <inventory></inventory>                 <!-- Blank value disables inventory (Optional) -->
+  </item>
+</request>

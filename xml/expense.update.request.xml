@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<request method="expense.update">
+  <expense>
+    <expense_id>433</expense_id>     <!-- Expense to update -->
+    <!-- Remaining arguments same as expense.create -->
+  </expense>
+</request>

@@ -1,0 +1,47 @@
+<!--?xml version="1.0" encoding="utf-8"?-->
+<request method="estimate.create">
+  <estimate>
+    <client_id>13</client_id>              <!-- Client being invoiced -->
+    <!-- Contacts optional -->
+    <contacts>
+        <contact>
+            <contact_id>0</contact_id>
+        </contact>
+    </contacts>
+    <status>draft</status>                 <!-- Ignored -->
+    <date>2007-06-23</date>                <!-- If not supplied, defaults to today's date (Optional) -->
+    <po_number>2314</po_number>            <!-- Purchase order number (Optional) -->
+    <discount>10</discount>                <!-- Percent discount (Optional) -->
+    <currency_code>CAD</currency_code>     <!-- Currency code (Optional) -->
+    <language>en</language>                <!-- Language, see language.list for codes (Optional) -->
+    <notes>Due upon receipt.</notes>       <!-- Notes (Optional) -->
+    <terms>Payment due in 30 days.</terms> <!-- Terms (Optional) -->
+    <first_name>John</first_name>          <!-- (Optional) -->
+    <last_name>Smith</last_name>           <!-- (Optional) -->
+    <organization>ABC Corp</organization>  <!-- (Optional) -->
+    <p_street1></p_street1>                <!-- (Optional) -->
+    <p_street2></p_street2>                <!-- (Optional) -->
+    <p_city></p_city>                      <!-- (Optional) -->
+    <p_state></p_state>                    <!-- (Optional) -->
+    <p_country></p_country>                <!-- (Optional) -->
+    <p_code></p_code>                      <!-- (Optional) -->
+    <!-- e.g. 'VAT Number' (Optional) -->
+    <vat_name></vat_name>
+    <!-- If set, shown with vat_name under client address (Optional) -->
+    <vat_number></vat_number>
+    <lines>                                <!-- Specify one or more line elements (Optional) -->
+      <line>
+        <name>Yard Work</name>                     <!-- (Optional) -->
+        <description>Mowed the lawn.</description> <!-- (Optional) -->
+        <unit_cost>10</unit_cost>                  <!-- Default is 0 -->
+        <quantity>4</quantity>                     <!-- Default is 0 -->
+        <tax1_name>GST</tax1_name>                 <!-- (Optional) -->
+        <tax2_name>PST</tax2_name>                 <!-- (Optional) -->
+        <tax1_percent>8</tax1_percent>             <!-- (Optional) -->
+        <tax2_percent>6</tax2_percent>             <!-- (Optional) -->
+        <type>Item</type>                          <!-- (Optional) -->
+  <!-- One of 'Item' or 'Time'. If omitted, the line's type defaults to 'Item' -->
+      </line>
+    </lines>
+  </estimate>
+</request>

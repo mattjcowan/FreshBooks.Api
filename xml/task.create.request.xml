@@ -1,0 +1,9 @@
+<!--?xml version="1.0" encoding="utf-8"?-->
+<request method="task.create">
+  <task>
+    <name>Yard Work</name>      <!-- (Required) -->
+    <billable>1</billable>      <!-- Must be either 1 or 0 (Default) -->
+    <rate>15.00</rate>          <!-- (Optional) -->
+    <description>Grass cutting, hedge trimming, etc.</description>
+  </task>
+</request>

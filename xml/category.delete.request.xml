@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<request method="category.delete">
+  <category_id>00000000012</category_id>
+</request>

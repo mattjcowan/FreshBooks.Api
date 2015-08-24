@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<request method="client.update">
+  <client>
+    <client_id>13</client_id>
+    <!-- Same params as client.create -->
+  </client>
+</request>

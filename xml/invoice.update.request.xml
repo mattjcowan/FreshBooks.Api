@@ -1,0 +1,7 @@
+<!--?xml version="1.0" encoding="utf-8"?-->
+<request method="invoice.update">
+  <invoice>
+    <invoice_id>344</invoice_id>            <!-- Invoice to update -->
+    <!-- Remaining arguments same as invoice.create -->
+  </invoice>
+</request>

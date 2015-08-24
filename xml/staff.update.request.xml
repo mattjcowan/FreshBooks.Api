@@ -1,0 +1,34 @@
+<!--?xml version="1.0" encoding="utf-8"?-->
+<request method="staff.update">
+    <staff>
+        <staff_id>2</staff_id>                                 <!-- required -->
+        <first_name>first</first_name>
+        <last_name>last</last_name>
+        <email>first-last@test.com</email>
+        <username>first-last</username>
+        <password>secret</password>
+        <!-- the following is a boolean field: 1 or 0 -->
+        <email_credentials>1</email_credentials>
+        <country>brazil</country>
+        <state>my state</state>
+        <city>my city</city>
+        <street1>some street 1</street1>
+        <street2>some street 2</street2>
+        <code>12345</code>
+        <home_phone>416-0000000</home_phone>
+        <business_phone>416-1111111</business_phone>
+        <mobile_phone>416-2222222</mobile_phone>
+        <fax>416-3333333</fax>
+        <rate>34.5</rate>
+        <!-- this list will override the current project list if exists -->
+        <projects>
+            <project>
+                <project_id>2</project_id>
+            </project>
+            <project>
+                <project_id>3</project_id>
+            </project>
+        </projects>
+        <notes>some notes not visible by staff members</notes>
+    </staff>
+</request>

@@ -1,0 +1,18 @@
+<!--?xml version="1.0" encoding="utf-8"?-->
+<request method="contractor.create">
+     <contractor>
+        <name>Name</name>
+        <email>email@freshbooks.com</email> <!--Required-->
+        <rate>25.50</rate> <!-- numeric values only -->
+        <task_id>1</task_id> <!--Required-->
+        <projects>
+         <!-- Assign new contractors to specific projects using project_id -->
+            <project>
+                <project_id>1</project_id>
+            </project>
+            <project>
+                <project_id>2</project_id>
+            </project>
+        </projects>
+    </contractor>
+</request>

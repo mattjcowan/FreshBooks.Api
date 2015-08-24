@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<response xmlns="http://www.freshbooks.com/api/" status="ok">
+    <tax>
+      <tax_id>1</tax_id>
+      <name>GST</name>
+      <rate>5</rate>
+      <number></number>
+      <compound>0</compound>
+    </tax>
+</response>

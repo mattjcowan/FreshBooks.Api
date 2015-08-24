@@ -1,0 +1,4 @@
+<!--?xml version="1.0" encoding="utf-8"?-->
+<request method="staff.delete">
+    <staff_id>2</staff_id>
+</request>

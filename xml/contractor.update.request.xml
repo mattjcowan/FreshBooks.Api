@@ -1,0 +1,19 @@
+<!--?xml version="1.0" encoding="utf-8"?-->
+<request method="contractor.update">
+    <contractor>
+        <contractor_id>36</contractor_id> <!--Required--> 
+        <name>Name</name>
+        <email>email@freshbooks.com</email>
+        <rate>25.50</rate> <!-- numeric values only -->
+        <task_id>1</task_id>
+        <!-- this list will override the current project list if exists -->
+        <projects>
+            <project>
+                <project_id>1</project_id>
+            </project>
+            <project>
+                <project_id>2</project_id>
+            </project>
+        </projects>
+    </contractor>
+</request>

@@ -1,0 +1,7 @@
+<!--?xml version="1.0" encoding="utf-8"?-->
+<request method="task.update">
+  <task>
+    <task_id>211</task_id>
+    <!-- Remaining params are same as task.create -->
+  </task>
+</request>

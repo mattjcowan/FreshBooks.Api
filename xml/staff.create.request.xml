@@ -1,0 +1,30 @@
+ <!--?xml version="1.0" encoding="utf-8"?-->
+ <request method="staff.create">
+       <staff>
+              <first_name>John</first_name>
+              <last_name>Doe</last_name>
+              <email>jdoe@example.com</email>
+              <!-- Username/Password are optional, but both are required if either is informed -->
+              <username>user</username>
+              <password>pass</password>
+              <!-- the following is a boolean field: 1 or 0 -->
+              <email_credentials>1</email_credentials>
+              <country>Canada</country>
+              <state>Ontario</state>
+              <city>Toronto</city>
+              <street1>123 Fake St.</street1>
+              <street2>Apt 2</street2>
+              <code>M5M3M4</code>
+              <home_phone>5555555</home_phone>
+              <business_phone>41611111111</business_phone>
+              <mobile_phone>416-2222222</mobile_phone>
+              <fax>416-3333333</fax>
+              <rate>75.5</rate> <!-- numeric values only -->
+              <projects>
+                     <project>
+                            <project_id>2</project_id>
+                     </project>
+              </projects>
+       </staff>
+ </request>
+ 

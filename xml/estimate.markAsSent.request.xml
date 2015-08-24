@@ -1,0 +1,4 @@
+<!--?xml version="1.0" encoding="utf-8"?-->
+<request method="estimate.markAsSent">
+    <estimate_id>38765</estimate_id>
+</request>

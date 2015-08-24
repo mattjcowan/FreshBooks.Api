@@ -1,0 +1,8 @@
+<!--?xml version="1.0" encoding="utf-8"?-->
+<request method="report.getExpenseDetails">
+    <!-- All fields below are optional -->
+   <client_id>12</client_id>
+   <date_from>YYYY-MM-DD</date_from>
+   <date_to>YYYY-MM-DD</date_to>
+   <group_by>date</group_by>
+</request>

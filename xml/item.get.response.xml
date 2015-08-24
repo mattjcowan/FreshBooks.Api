@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<response xmlns="http://www.freshbooks.com/api/" status="ok">
+  <item>
+    <item_id>18</item_id>
+    <name>Cheap Slippers</name>
+    <description>Super tight!</description>
+    <unit_cost>34.99</unit_cost>
+    <quantity>1</quantity>
+    <inventory></inventory>
+    <folder>active</folder>
+  </item>
+</response>

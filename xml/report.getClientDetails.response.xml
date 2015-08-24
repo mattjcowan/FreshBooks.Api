@@ -1,0 +1,22 @@
+<!--?xml version="1.0" encoding="utf-8"?-->
+<response xmlns="http://www.freshbooks.com/api/" status="ok">
+  <reports>
+    <report>
+      <client_id>12</client_id>
+      <balances>
+        <balance>
+          <total>1676.47</total>
+          <paid>2.50</paid>
+          <outstanding>1673.97</outstanding>
+          <currency_code>CAD</currency_code>
+        </balance>
+        <balance>
+          <total>6102.24</total>
+          <paid>110.00</paid>
+          <outstanding>5992.24</outstanding>
+          <currency_code>USD</currency_code>
+        </balance>
+      </balances>
+    </report>
+  </reports>
+</response>

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<request method="gateway.list">
+  <autobill_capable>1</autobill_capable> <!-- Filter by Auto bill capable gateways (Optional) -->
+</request>

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<request method="tax.delete">
+  <tax_id>1</tax_id>
+</request>

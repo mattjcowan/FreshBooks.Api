@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<request method="project.create">
+  <project>
+    <!-- (Required) -->
+    <name>Website Redesign</name>
+    <!-- (Required) -->
+    <bill_method>project-rate</bill_method>
+    <!-- Associated client (Optional) -->
+    <client_id>21</client_id>
+    <!-- (Optional) -->
+    <rate>45.00</rate>
+    <!-- (Optional) -->
+    <description></description>
+    <!-- (Optional)-->
+    <hour_budget>13</hour_budget>
+    <tasks>
+      <task>
+          <task_id>5</task_id>
+      </task>
+      <task>
+          <task_id>3</task_id>
+      </task>
+      <task>
+          <task_id>12</task_id>
+          <rate>25</rate>
+      </task>
+      <task>
+          <task_id>11</task_id>
+          <rate>35</rate>
+      </task>
+    </tasks>
+  </project>
+</request>

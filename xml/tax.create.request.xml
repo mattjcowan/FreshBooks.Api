@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<request method="tax.create">
+  <tax>
+    <name>VAT</name>                        <!-- Name of tax -->
+    <rate>15</rate>                         <!-- tax percentage amount  (optional)  Default is 0 -->
+    <number>1222222</number>                <!--  government-issued tax identification number (Optional) -->
+    <compound>1</compound>                  <!-- Is this a compound tax (Optional) Default is 0 -->
+  </tax>
+</request>

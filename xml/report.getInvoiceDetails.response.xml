@@ -1,0 +1,29 @@
+<!--?xml version="1.0" encoding="utf-8"?-->
+<response xmlns="http://www.freshbooks.com/api/" status="ok">
+  <reports>
+    <report>
+      <billed>102959905.17</billed>
+      <collected>100046149.96</collected>
+      <outstanding>2913755.21</outstanding>
+      <currency_code>CAD</currency_code>
+    </report>
+    <report>
+      <billed>100.00</billed>
+      <collected>0.00</collected>
+      <outstanding>100.00</outstanding>
+      <currency_code>EUR</currency_code>
+    </report>
+    <report>
+      <billed>30.00</billed>
+      <collected>30.00</collected>
+      <outstanding>0.00</outstanding>
+      <currency_code>GBP</currency_code>
+    </report>
+    <report>
+      <billed>75394.35</billed>
+      <collected>1951.66</collected>
+      <outstanding>73442.69</outstanding>
+      <currency_code>USD</currency_code>
+    </report>
+  </reports>
+</response>

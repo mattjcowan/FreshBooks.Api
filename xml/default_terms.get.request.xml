@@ -1,0 +1,4 @@
+<!--?xml version="1.0" encoding="utf-8"?-->
+<request method="default_terms.get">
+   <type>invoice</type> <!--(Required) 'invoice', 'estimate', or 'credit'-->
+</request>

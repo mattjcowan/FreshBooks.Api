@@ -1,0 +1,9 @@
+<!--?xml version="1.0" encoding="utf-8"?-->
+<request method="estimate.list">
+  <client_id>3</client_id>            <!-- Filter by client (Optional) -->
+  <date_from>2007-01-01</date_from>   <!-- Return estimates dated after this arg (Optional) -->
+  <date_to>2007-04-01</date_to>       <!-- Return estimates dated before this arg (Optional) -->
+  <page>1</page>                      <!-- Page number to return, default is 1 (Optional) -->
+  <per_page>10</per_page>             <!-- Number of results per page, default is 25 (Optional) -->
+  <folder>active</folder>             <!--One of 'active', 'archived', 'deleted' (Optional) -->
+</request>

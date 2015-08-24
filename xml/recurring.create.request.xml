@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<request method="recurring.create">
+  <recurring>
+    <client_id>40</client_id>     <!-- Client to generate invoices for -->
+    <!-- Contacts are optional -->
+    <contacts>
+        <contact>
+            <contact_id>23</contact_id>
+        </contact>
+    </contacts>
+    <date>2007-09-23</date>
+            <po_number>2314</po_number>    <!-- Purchase order number (Optional) -->
+    <discount>10</discount>    <!-- Percent discount (Optional) -->
+    <occurrences>1</occurrences>
+    <!-- Number of invoices to generate; 0 infinite (default 0) -->
+    <frequency>monthly</frequency>
+    <!-- One of 'weekly', '2 weeks', '4 weeks', 'monthly', '2 months', -->
+    <!-- '3 months', '6 months', 'yearly', '2 years' -->
+    <send_email>1</send_email> <!-- Send email notification(Default 1) -->
+    <send_snail_mail>0</send_snail_mail>  <!-- Send copy by snail mail (Default 0) -->
+    <currency_code>CAD</currency_code> <!-- Defaults to systems base currency (Optional) -->
+    <language>en</language> <!-- Defaults to the client's language  -->
+    <notes>Due upon receipt.</notes>       <!-- (Optional) -->
+    <terms>Payment due in 30 days.</terms> <!-- (Optional) -->
+    <first_name>John</first_name>           <!-- (Optional) -->
+    <last_name>Smith</last_name>            <!-- (Optional) -->
+    <organization>ABC Corp</organization>   <!-- (Optional) -->
+    <p_street1></p_street1>                 <!-- (Optional) -->
+    <p_street2></p_street2>                 <!-- (Optional) -->
+    <p_city></p_city>                       <!-- (Optional) -->
+    <p_state></p_state>                     <!-- (Optional) -->
+    <p_country></p_country>                 <!-- (Optional) -->
+    <p_code></p_code>                       <!-- (Optional) -->
+    <vat_name></vat_name>                   <!-- e.g. 'VAT Number' (Optional) -->
+    <vat_number></vat_number>               <!-- If set, shown with vat_name under client address (Optional) -->
+    <return_uri></return_uri>               <!-- (Optional) -->
+    <autobill>                              <!-- (Optional) -->
+      <!-- Case insensitive gateway name from gateway.list (Must be auto-bill capable) -->
+      <gateway_name>Authorize.net</gateway_name>
+      <card>
+        <!-- Can include spaces, hyphens and other punctuation marks -->
+        <number>4111 1111 1111 1111</number>
+        <name>John Smith</name>
+        <expiration>
+          <month>3</month>
+          <year>2012</year>
+        </expiration>
+      </card>
+    </autobill>
+    <lines>
+      <line>
+        <name>Yard Work</name>
+        <description>Mowed the lawn.</description>
+        <unit_cost>10</unit_cost>
+        <quantity>4</quantity>
+        <tax1_name>GST</tax1_name>
+        <tax2_name>PST</tax2_name>
+        <tax1_percent>8</tax1_percent>
+        <tax2_percent>6</tax2_percent>
+        <type>Time</type>                            <!-- (Optional) -->
+   <!-- One of 'Item' or 'Time'. If omitted, the line's type defaults to 'Item' -->
+      </line>
+    </lines>
+  </recurring>
+</request>

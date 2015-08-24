@@ -1,0 +1,17 @@
+<!--?xml version="1.0" encoding="utf-8"?-->
+<response xmlns="http://www.freshbooks.com/api/" status="ok">
+  <default_terms>
+    <terms>
+      <type>invoice</type>
+      <message>Sample Terms</message>
+    </terms>
+    <terms>
+      <type>estimate</type>
+      <message>Sample Terms</message>
+    </terms>
+    <terms>
+      <type>credit</type>
+      <message>Sample Terms</message>
+    </terms>
+  </default_terms>
+</response>

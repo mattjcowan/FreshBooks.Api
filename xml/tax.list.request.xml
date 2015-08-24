@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<request method="tax.list">
+  <page>1</page>     <!-- The page number to show (Optional) -->
+  <per_page>5</per_page> <!-- The number of results per page, default 25 (Optional) -->
+  <compound>1</compound> <!-- Will return only compound taxes if 1, or non-compound if 0 (Optional) -->
+</request>

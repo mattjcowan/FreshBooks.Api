@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<request method="project.update">
+  <project>
+    <project_id>15</project_id>
+    <!-- Remaining params are same as project.create -->
+  </project>
+</request>

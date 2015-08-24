@@ -1,0 +1,4 @@
+<!--?xml version="1.0" encoding="utf-8"?-->
+<request method="report.getClientDetails">
+   <client_id>12</client_id>
+</request>

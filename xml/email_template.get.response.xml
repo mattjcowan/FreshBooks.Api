@@ -1,0 +1,24 @@
+<!--?xml version="1.0" encoding="utf-8"?-->
+<response xmlns="http://www.freshbooks.com/api/" status="ok">
+  <email_template>
+    <type>new_invoice</type>
+    <subject>New invoice ::invoice number:: from ::company name::, sent using FreshBooks</subject>
+    To view your invoice from ::company name:: for ::payment amount::, or to download a PDF copy for your records, click the link below:
+::invoice link::
+    <!-- The following required params outline email variables that can be referenced in the template -->
+    <required_params>
+      <required_param>invoice link</required_param>
+    </required_params>
+    <!-- The following optional_params also outline available email variables, but are not required in the template -->
+    <optional_params>
+      <optional_param>invoice number</optional_param>
+      <optional_param>invoice link</optional_param>
+      <optional_param>payment amount</optional_param>
+      <optional_param>amount owed</optional_param>
+      <optional_param>company name</optional_param>
+      <optional_param>client organization</optional_param>
+      <optional_param>first name</optional_param>
+      <optional_param>last name</optional_param>
+    </optional_params>
+  </email_template>
+</response>

@@ -1,0 +1,5 @@
+<!--?xml version="1.0" encoding="utf-8"?-->
+<request method="invoice.lines.delete">
+  <invoice_id>123</invoice_id>
+  <line_id>2</line_id>
+</request>

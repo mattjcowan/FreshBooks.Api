@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<request method="recurring.update">
+  <recurring>
+    <recurring_id>21</recurring_id>
+    <!-- Remaining arguments same as recurring.create -->
+    ...
+  </recurring>
+</request>

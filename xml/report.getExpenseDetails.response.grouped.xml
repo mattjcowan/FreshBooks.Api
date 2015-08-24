@@ -1,0 +1,21 @@
+<!--?xml version="1.0" encoding="utf-8"?-->
+<response xmlns="http://www.freshbooks.com/api/" status="ok">
+  <reports>
+    <report>
+      <unbilled>260.00</unbilled>
+      <invoiced>299.00</invoiced>
+      <recouped>0.00</recouped>
+      <internal>10565.02</internal>
+      <year>2014</year>
+      <month>7</month>
+    </report>
+    <report>
+      <unbilled>100.00</unbilled>
+      <invoiced>500.00</invoiced>
+      <recouped>280.00</recouped>
+      <internal>20540.00</internal>
+      <year>2013</year>
+      <month>5</month>
+    </report>
+  </reports>
+</response>

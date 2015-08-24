@@ -1,0 +1,44 @@
+<!--?xml version="1.0" encoding="utf-8"?-->
+<response xmlns="http://www.freshbooks.com/api/" status="ok">
+  <staff_members page="1" per_page="25" pages="1" total="5">
+    <member>
+      <staff_id>1</staff_id>
+      <username>admin</username>
+      <first_name></first_name>
+      <last_name>abcorp</last_name>
+      <email>abc@abcorp.com</email>
+      <business_phone></business_phone>
+      <mobile_phone></mobile_phone>
+      <rate></rate>
+      <last_login>2011-04-01 12:00:00</last_login>
+      <number_of_logins>50</number_of_logins>
+      <signup_date>2011-04-01 12:00:00</signup_date>
+      <street1></street1>
+      <street2></street2>
+      <city></city>
+      <state></state>
+      <country></country>
+      <code></code>
+    </member>
+    <member>
+      <staff_id>2</staff_id>
+      <username>staff1</username>
+      <first_name>John</first_name>
+      <last_name>Smith</last_name>
+      <email>jsmith@abcorp.com</email>
+      <business_phone></business_phone>
+      <mobile_phone></mobile_phone>
+      <rate></rate>
+      <last_login>2011-04-01 12:00:00</last_login>
+      <number_of_logins>25</number_of_logins>
+      <signup_date>2011-04-01 12:00:00</signup_date>
+      <street1></street1>
+      <street2></street2>
+      <city></city>
+      <state></state>
+      <country></country>
+      <code></code>
+    </member>
+    …
+  </staff_members>
+</response>

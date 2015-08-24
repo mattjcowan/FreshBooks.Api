@@ -1,0 +1,8 @@
+<!--?xml version="1.0" encoding="utf-8"?-->
+<request method="estimate.update">
+  <estimate>
+    <estimate_id>103</estimate_id>
+    <status>sent</status>                 <!-- Ignored -->
+    <!-- Remaining arguments same as estimate.create -->
+  </estimate>
+</request>

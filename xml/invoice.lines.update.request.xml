@@ -1,0 +1,20 @@
+<!--?xml version="1.0" encoding="utf-8"?-->
+<request method="invoice.lines.update">
+  <invoice_id>99</invoice_id>
+  <lines>
+    <line>
+      <line_id>1</line_id>
+      <amount>50</amount>
+      <name>Premium Yak Shaving</name>
+      <unit_cost>12.50</unit_cost>
+          ...
+      </line>
+      <line>
+        <line_id>2</line_id>
+        <amount>30</amount>
+        <name>Advanced Telephone Sanitizing</name>
+        <quantity>3.00</quantity>
+        ...
+      </line>
+  </lines>
+</request>

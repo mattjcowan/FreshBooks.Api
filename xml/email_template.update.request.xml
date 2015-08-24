@@ -1,0 +1,8 @@
+<!--?xml version="1.0" encoding="utf-8"?-->
+<request method="email_template.update">
+    <email_template>
+        <type>new_invoice</type>
+        <subject>New invoice ::invoice number:: from ::company name::</subject>
+        To view your invoice from ::company name:: click the link below: ::invoice link::
+    </email_template>
+</request>

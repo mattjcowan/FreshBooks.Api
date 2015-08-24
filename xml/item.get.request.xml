@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<request method="item.get">
+  <item_id>18</item_id>
+</request>

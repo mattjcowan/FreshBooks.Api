@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<response xmlns="http://www.freshbooks.com/api/" status="ok">
+  <system>
+    <company_name>Acme Inc.</company_name>
+    <profession>Widget Designer</profession>
+    <address>
+      <street1>123 Avenue B</street1>
+      <street2></street2>
+      <city>Toronto</city>
+      <province>Ontario</province>
+      <postal_code>M1A 1H4</postal_code>
+      <country>Canada</country>
+    </address>
+    <api>
+      <requests>2</requests>  <!-- API requests  issued today -->
+      <request_limit deprecated="1">2147483647</request_limit> <!-- Legacy API request limit (not enforced) -->
+    </api>
+  </system>
+</response>

@@ -1,0 +1,5 @@
+<!--?xml version="1.0" encoding="utf-8"?-->
+<request method="contractor.list"> 
+    <page>1</page>
+    <per_page>1</per_page>
+</request>

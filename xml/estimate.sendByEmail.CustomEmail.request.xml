@@ -1,0 +1,6 @@
+<!--?xml version="1.0" encoding="utf-8"?-->
+<request method="estimate.sendByEmail">
+  <estimate_id>21</estimate_id>
+  <subject>This is a custom subject!</subject>
+  <message>You have a new estimate. Get it here: ::estimate link::</message>
+</request>

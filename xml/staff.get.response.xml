@@ -1,0 +1,22 @@
+<!--?xml version="1.0" encoding="utf-8"?-->
+<response xmlns="http://www.freshbooks.com/api/" status="ok">
+  <staff>
+    <staff_id>2</staff_id>
+    <username>staff1</username>
+    <first_name>test</first_name>
+    <last_name>test2</last_name>
+    <email>jsmith@abcorp.com</email>
+    <business_phone>(123) 456-7890</business_phone>
+    <mobile_phone>(123) 456-7890</mobile_phone>
+    <rate>0</rate>
+    <last_login>2008-11-20 13:26:00</last_login>
+    <number_of_logins>13</number_of_logins>
+    <signup_date>2008-10-22 13:57:00</signup_date>
+    <street1>123 ABC Street</street1>
+    <street2></street2>
+    <city>Toronto</city>
+    <state>Ontario</state>
+    <country>Canada</country>
+    <code>M1M 1A1</code>
+  </staff>
+</response>

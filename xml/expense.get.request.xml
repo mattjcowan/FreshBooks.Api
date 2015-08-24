@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<request method="expense.get">
+  <expense_id>433</expense_id>
+</request>

@@ -1,0 +1,57 @@
+<request method="invoice.create">
+  <invoice>
+    <!-- Client being invoiced -->
+    <client_id>13</client_id>
+    <!-- (Optional) -->
+    <contacts>
+        <contact>
+            <contact_id>14</contact_id>
+        </contact>
+    </contacts>
+    <!-- Number, as it appears on the invoice (Optional) -->
+    <number>FB00004</number>
+    <!-- One of sent, viewed or draft [default] -->
+    <status>draft</status>
+    <!-- If not supplied, defaults to today's date (Optional) -->
+    <date>2007-06-23</date>
+    <!-- Purchase order number (Optional) -->
+    <po_number>2314</po_number>
+    <!-- Percent discount (Optional) -->
+    <discount>10</discount>
+    <!-- Notes (Optional) -->
+    <notes>Due upon receipt.</notes>
+    <!-- Currency Code, defaults to your base currency (Optional) -->
+    <currency_code>CAD</currency_code>
+    <!-- Language code, defaults to the client's language; see language.list for codes (Optional) -->
+    <language>en</language>
+    <!-- Terms (Optional) -->
+    <terms>Payment due in 30 days.</terms>
+    <!-- Return URI (Optional) -->
+    <return_uri>http://example.com/account</return_uri>
+    <first_name>John</first_name>              <!-- (Optional) -->
+    <last_name>Smith</last_name>               <!-- (Optional) -->
+    <organization>ABC Corp</organization>      <!-- (Optional) -->
+    <p_street1></p_street1>                    <!-- (Optional) -->
+    <p_street2></p_street2>                    <!-- (Optional) -->
+    <p_city></p_city>                          <!-- (Optional) -->
+    <p_state></p_state>                        <!-- (Optional) -->
+    <p_country></p_country>                    <!-- (Optional) -->
+    <p_code></p_code>                          <!-- (Optional) -->
+    <vat_name></vat_name>     <!-- e.g. 'VAT Number' (Optional) -->
+    <vat_number></vat_number> <!-- If set, shown with vat_name under client address (Optional) -->
+    <lines>     <!-- Specify one or more line elements (Optional) -->
+      <line>
+        <name>Yard Work</name>                       <!-- (Optional) -->
+        <description>Mowed the lawn.</description>   <!-- (Optional) -->
+        <unit_cost>10</unit_cost>                    <!-- Default is 0 -->
+        <quantity>4</quantity>                       <!-- Default is 0 -->
+        <tax1_name>GST</tax1_name>                   <!-- (Optional) -->
+        <tax2_name>PST</tax2_name>                   <!-- (Optional) -->
+        <tax1_percent>5</tax1_percent>               <!-- (Optional) -->
+        <tax2_percent>8</tax2_percent>               <!-- (Optional) -->
+        <type>Item</type>                            <!-- (Optional) -->
+     <!-- One of 'Item' or 'Time'. If omitted, the line's type defaults to 'Item' -->
+      </line>
+    </lines>
+  </invoice>
+</request>

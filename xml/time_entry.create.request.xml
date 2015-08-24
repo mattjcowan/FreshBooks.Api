@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<request method="time_entry.create">
+  <time_entry>
+    <project_id>1</project_id>        <!-- (Required) -->
+    <task_id>1</task_id>              <!-- (Required) -->
+    <staff_id>1</staff_id>            <!-- (Optional) -->
+    <hours>4.5</hours>                <!-- (Optional) -->
+    <notes>Phone consultation</notes> <!-- (Optional) -->
+    <date>2007-01-01</date>           <!-- (Optional) -->
+  </time_entry>
+</request>

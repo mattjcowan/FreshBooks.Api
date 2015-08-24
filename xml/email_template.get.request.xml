@@ -1,0 +1,4 @@
+<!--?xml version="1.0" encoding="utf-8"?-->
+<request method="email_template.get">
+    <type>new_invoice</type> <!-- Required -->
+</request>

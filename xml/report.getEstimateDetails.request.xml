@@ -1,0 +1,7 @@
+<!--?xml version="1.0" encoding="utf-8"?-->
+<request method="report.getEstimateDetails">
+   <client_id>69931</client_id>
+   <!-- All the fields below are optional -->
+   <date_from>YYYY-MM-DD</date_from>
+   <date_to>YYYY-MM-DD</date_to>
+</request>
